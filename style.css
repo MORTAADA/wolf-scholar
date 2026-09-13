@@ -4,15 +4,15 @@
    ============================================================ */
 
 *{margin:0;padding:0;box-sizing:border-box}
-html,body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;background:#0a0e14;color:#e2e8f0;min-height:100vh;width:100%}
-body{padding-bottom:80px;display:flex;justify-content:center}
+html,body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;background:#0a0e14;color:#e2e8f0;min-height:100vh;width:100%;max-width:100vw;overflow-x:hidden}
+body{padding-bottom:80px}
 button{background:none;border:none;color:inherit;font:inherit;padding:6px 12px;border-radius:8px;touch-action:manipulation;transition:all .2s ease;cursor:pointer}
 button:active{transform:scale(.95)}
 input,select,textarea{background:#141c26;border:1px solid #2a3442;color:#e2e8f0;border-radius:10px;padding:12px 14px;width:100%;font-size:16px;font-family:inherit}
 input:focus,select:focus,textarea:focus{border-color:#4b7bec;outline:none}
 input[type="date"],input[type="time"]{color-scheme:dark;cursor:pointer}
 textarea{resize:vertical;min-height:60px}
-.app{width:100%;max-width:780px;padding:16px 18px 90px}
+.app{width:100%;max-width:780px;padding:16px 18px 90px;margin:0 auto}
 @media(min-width:900px){.app{max-width:860px;padding:30px 40px}.bottom-nav{display:none}}
 
 .header{display:flex;justify-content:space-between;align-items:center;padding:16px 0 12px;border-bottom:1px solid #1e2733;margin-bottom:24px}
@@ -274,7 +274,7 @@ textarea{resize:vertical;min-height:60px}
 .heatmap-wrap{background:#0e161f;border-radius:14px;padding:14px;border:1px solid #1a2430;overflow-x:auto}
 .heatmap-wrap::-webkit-scrollbar{height:4px}
 .heatmap-wrap::-webkit-scrollbar-thumb{background:#2f3d52;border-radius:4px}
-.heatmap-svg{display:block;width:100%;min-width:600px;height:auto}
+.heatmap-svg{display:block;width:600px;min-width:600px;height:auto}
 .heatmap-legend{display:flex;align-items:center;gap:6px;margin-top:10px;font-size:11px;color:#6b7f9a;justify-content:flex-end}
 .heatmap-legend .hl-box{width:12px;height:12px;border-radius:3px}
 .hl-0{background:#1a2430}
@@ -284,7 +284,7 @@ textarea{resize:vertical;min-height:60px}
 .hl-4{background:#6ae8a5}
 
 /* Charts */
-.chart-wrap{background:#0e161f;border-radius:14px;padding:14px;border:1px solid #1a2430;margin-bottom:14px}
+.chart-wrap{background:#0e161f;border-radius:14px;padding:14px;border:1px solid #1a2430;margin-bottom:14px;overflow-x:auto;max-width:100%}
 .chart-svg{display:block;width:100%;height:auto;overflow:visible}
 .chart-title{font-size:13px;color:#8ba2c0;margin-bottom:10px;font-weight:600;display:flex;align-items:center;gap:8px}
 .chart-legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;justify-content:center;font-size:11px}
