@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#0a0e14">
+<title>White Wolf Scholar</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="root"></div>
+
+<!-- CHATBOT -->
+<div class="chatbot-fab" id="chatbot-fab" title="Assistant IA">💬</div>
+<div class="chatbot-window" id="chatbot-window">
+  <div class="chatbot-header">
+    <span class="title">🐺 Assistant White Wolf</span>
+    <span class="close-btn" id="chatbot-close">✕</span>
+  </div>
+  <div class="chatbot-messages" id="chatbot-messages">
+    <div class="message bot">🐺 <strong>Bienvenue !</strong><br><br>💡 Tape "aide" pour les commandes<br>🎓 Essaie: "quiz sur la chimie"</div>
+  </div>
+  <div class="chatbot-input">
+    <input type="text" id="chatbot-input" placeholder="Écris ta demande...">
+    <button class="voice-btn" id="voice-btn" title="Commande vocale">🎤</button>
+    <button id="chatbot-send">➤</button>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
