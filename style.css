@@ -674,3 +674,445 @@ img,svg{max-width:100%}
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
+
+
+/* ============================================================
+   WHITE WOLF — PROFESSIONAL SVG ICON SYSTEM
+   Replaces legacy emoji visually without changing app logic.
+   ============================================================ */
+.ww-icon{display:inline-flex;align-items:center;justify-content:center;width:1.35em;height:1.35em;flex:0 0 auto;vertical-align:-.28em;color:currentColor;line-height:1}
+.ww-icon svg{width:100%;height:100%;display:block;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ww-icon-inline{width:1.15em;height:1.15em;vertical-align:-.2em;margin:0 .08em}
+.ww-icon-sm{width:1.1em;height:1.1em;vertical-align:-.18em}
+.ww-icon-chat{width:1.45em;height:1.45em}
+.chatbot-fab .ww-icon{width:28px;height:28px}
+.chatbot-window .title{display:flex;align-items:center;gap:8px}
+.chatbot-window .close-btn{display:inline-flex;align-items:center;justify-content:center}
+.chatbot-window .close-btn .ww-icon{width:20px;height:20px}
+.chatbot-input button .ww-icon{width:20px;height:20px}
+.voice-btn .ww-icon{width:19px;height:19px}
+
+/* Keep icon geometry stable on compact screens */
+@media (max-width:600px){
+  .ww-icon{width:clamp(18px,5vw,26px);height:clamp(18px,5vw,26px)}
+  .ww-icon-inline{width:clamp(17px,4.5vw,22px);height:clamp(17px,4.5vw,22px)}
+  .chatbot-fab .ww-icon{width:27px;height:27px}
+}
+
+
+/* ============================================================
+   WHITE WOLF — PROFESSIONAL APP BRANDING
+   Header logo: crisp SVG emblem, responsive and consistent.
+   ============================================================ */
+.app-brand{
+  min-width:0;
+  display:flex;
+  align-items:center;
+  gap:11px;
+  white-space:nowrap;
+}
+.app-logo{
+  width:44px;height:44px;flex:0 0 44px;
+  display:block;object-fit:contain;
+  border-radius:12px;
+  filter:drop-shadow(0 0 10px rgba(75,123,236,.28));
+  background:#0a0e14;
+}
+.app-brand-text{
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.app-version{
+  color:#6f9fe7;
+  -webkit-text-fill-color:#6f9fe7;
+}
+@media(max-width:500px){
+  .app-brand{gap:9px}
+  .app-logo{width:40px;height:40px;flex-basis:40px}
+  .header h1{font-size:clamp(17px,5vw,20px)}
+}
+@media(max-width:360px){
+  .app-logo{width:36px;height:36px;flex-basis:36px}
+  .app-brand{gap:8px}
+}
+
+/* WHITE WOLF — ONBOARDING LOGO V2 */
+.onboarding-logo-v2{
+  width:clamp(150px,42vw,210px);
+  height:clamp(150px,42vw,210px);
+  margin:0 auto 14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:28px;
+  overflow:hidden;
+  animation:wwLogoFloat 4s ease-in-out infinite;
+  filter:drop-shadow(0 0 18px rgba(75,123,236,.18));
+}
+.onboarding-logo-v2 img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:contain;
+}
+@keyframes wwLogoFloat{
+  0%,100%{transform:translateY(0) scale(1)}
+  50%{transform:translateY(-5px) scale(1.015)}
+}
+@media(max-width:500px){
+  .onboarding-logo-v2{width:clamp(132px,42vw,175px);height:clamp(132px,42vw,175px);border-radius:22px;margin-bottom:12px}
+}
+@media(max-height:700px){
+  .onboarding-logo-v2{width:130px;height:130px;margin-bottom:8px}
+  .onboarding-title{margin-bottom:8px}
+  .onboarding-subtitle{margin-bottom:16px}
+}
+/* ============================================================
+   WHITE WOLF SCHOLAR — CINEMATIC MOUNTAIN BACKGROUND V40
+   ============================================================ */
+html,body{background:#060b13}
+body{position:relative}
+body::before{content:"";position:fixed;inset:0;z-index:-2;background-image:linear-gradient(rgba(4,9,17,.78),rgba(4,9,17,.9)),url('mountain-bg.jpg');background-size:cover;background-position:center top;background-repeat:no-repeat;opacity:.48;pointer-events:none}
+body::after{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at 70% 18%,rgba(31,113,255,.12),transparent 38%),linear-gradient(180deg,rgba(5,10,18,.08),rgba(5,10,18,.62));pointer-events:none}
+.app{position:relative;background:linear-gradient(180deg,rgba(5,12,22,.18),rgba(5,12,22,.34));border-left:1px solid rgba(65,128,210,.06);border-right:1px solid rgba(65,128,210,.06)}
+.header{background:linear-gradient(180deg,rgba(7,15,27,.78),rgba(7,15,27,.48));border:1px solid rgba(66,126,210,.16);border-radius:18px;padding:13px 14px 11px;margin-bottom:24px;box-shadow:0 14px 40px rgba(0,0,0,.24),inset 0 1px rgba(255,255,255,.025);backdrop-filter:blur(14px)}
+.card{background:linear-gradient(145deg,rgba(11,25,42,.9),rgba(7,17,29,.86));border-color:rgba(52,113,192,.22);box-shadow:0 12px 30px rgba(0,0,0,.2),inset 0 1px rgba(255,255,255,.025);backdrop-filter:blur(12px)}
+.dashboard-shell{position:relative;padding-top:2px}
+.dashboard-shell::before{content:"";position:absolute;left:-18px;right:-18px;top:-18px;height:330px;border-radius:26px;background-image:linear-gradient(90deg,rgba(4,10,18,.96) 0%,rgba(4,10,18,.76) 34%,rgba(4,10,18,.18) 72%,rgba(4,10,18,.52) 100%),url('mountain-bg.jpg');background-size:cover;background-position:center 20%;opacity:.78;z-index:-1;border:1px solid rgba(57,124,215,.13);box-shadow:0 22px 55px rgba(0,0,0,.35);mask-image:linear-gradient(to bottom,black 0%,black 78%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,black 0%,black 78%,transparent 100%)}
+.dashboard-shell .card{background:linear-gradient(145deg,rgba(7,18,31,.82),rgba(5,13,24,.88))}
+.dashboard-shell .card:first-of-type{border-color:rgba(58,137,244,.32);box-shadow:0 18px 50px rgba(0,0,0,.32),0 0 34px rgba(30,115,255,.07),inset 0 1px rgba(255,255,255,.035)}
+.progress-bar{background:rgba(24,45,71,.78);box-shadow:inset 0 1px rgba(255,255,255,.03)}
+.subject-card,.schedule-status-item,.revision-group,.lesson-row,.resources-section,.res-card,.res-empty,.lang-stat-box,.res-stat,.level-desc{background:rgba(7,18,30,.82);border-color:rgba(52,103,166,.2)}
+.bottom-nav{background:rgba(5,12,21,.9);border-top-color:rgba(61,112,178,.22);backdrop-filter:blur(18px)}
+@media(max-width:500px){
+ body::before{background-position:center top;opacity:.34}
+ .app{padding-left:12px;padding-right:12px;background:linear-gradient(180deg,rgba(5,12,22,.12),rgba(5,12,22,.25))}
+ .header{border-radius:15px;padding:11px 10px;margin-bottom:18px}
+ .dashboard-shell::before{left:-12px;right:-12px;top:-12px;height:260px;border-radius:20px;background-position:center top;opacity:.68}
+ .dashboard-shell .card{backdrop-filter:blur(10px)}
+}
+
+
+/* ============================================================
+   WHITE WOLF V40 — CINEMATIC SCIENTIFIC DASHBOARD
+   ============================================================ */
+:root{
+  --ww-bg:#050a12;
+  --ww-panel:rgba(6,15,28,.78);
+  --ww-panel-strong:rgba(5,14,27,.9);
+  --ww-blue:#1687ff;
+  --ww-cyan:#27c8ff;
+  --ww-border:rgba(55,139,235,.30);
+}
+
+body{
+  background:
+    radial-gradient(circle at 50% 0%,rgba(16,91,180,.16),transparent 38%),
+    #050a12;
+}
+
+.header{
+  position:relative;
+  z-index:20;
+  padding:12px 14px;
+  margin-bottom:18px;
+  border:1px solid rgba(58,125,206,.28);
+  border-radius:16px;
+  background:rgba(5,12,22,.82);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  box-shadow:0 10px 35px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.035);
+}
+.header h1{gap:10px}
+.app-logo{filter:drop-shadow(0 0 10px rgba(30,137,255,.35))}
+
+.dashboard-shell{
+  position:relative;
+  isolation:isolate;
+  padding:0 2px 8px;
+  border-radius:22px;
+  background:
+    linear-gradient(180deg,rgba(3,10,19,.05) 0%,rgba(3,9,17,.34) 34%,rgba(3,9,17,.88) 76%,#050a12 100%),
+    url('mountain-bg.jpg') center top / 100% auto no-repeat;
+}
+.dashboard-shell:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  border-radius:22px;
+  background:radial-gradient(circle at 72% 16%,rgba(18,137,255,.15),transparent 28%);
+}
+.dashboard-shell>.card,
+.dashboard-shell>.notif-widget,
+.dashboard-shell>.err-widget{
+  position:relative;
+  z-index:1;
+}
+
+.ww-dashboard-hero{
+  position:relative;
+  min-height:250px;
+  margin:0 0 16px;
+  overflow:hidden;
+  border:1px solid rgba(38,135,244,.42);
+  border-radius:20px;
+  background:
+    linear-gradient(90deg,rgba(2,8,16,.96) 0%,rgba(2,8,16,.74) 42%,rgba(2,8,16,.18) 76%,rgba(2,8,16,.42) 100%),
+    url('mountain-bg.jpg') center / cover no-repeat;
+  box-shadow:0 16px 45px rgba(0,0,0,.36),0 0 30px rgba(0,111,255,.08);
+}
+.ww-hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,14,26,.08),rgba(2,8,16,.62));pointer-events:none}
+.ww-hero-content{position:relative;z-index:2;padding:38px 28px;max-width:58%}
+.ww-hero-kicker{display:flex;align-items:center;gap:9px;color:#6ebcff;font-size:10px;font-weight:700;letter-spacing:1.7px;margin-bottom:14px}
+.ww-hero-line{width:26px;height:2px;border-radius:4px;background:#1687ff;box-shadow:0 0 10px #1687ff}
+.ww-hero-content h2{font-size:clamp(25px,5vw,38px);line-height:1.12;color:#f2f7ff;margin-bottom:12px;letter-spacing:-.7px;text-shadow:0 2px 18px rgba(0,0,0,.5)}
+.ww-hero-content h2 span{color:#27aaff;font-size:.72em}
+.ww-hero-content p{font-size:15px;line-height:1.65;color:#a9c3e5}
+.ww-hero-wolf{position:absolute;z-index:2;right:3%;bottom:-18px;width:min(255px,38%);max-height:235px;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 0 18px rgba(0,125,255,.34));opacity:.92}
+
+.dashboard-shell .card{
+  background:linear-gradient(145deg,rgba(10,25,43,.84),rgba(5,15,28,.88));
+  border-color:rgba(47,125,211,.28);
+  box-shadow:0 10px 28px rgba(0,0,0,.20),inset 0 1px 0 rgba(255,255,255,.025);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+}
+.dashboard-shell .card:hover{border-color:rgba(47,151,255,.48);box-shadow:0 12px 34px rgba(0,60,130,.18),inset 0 1px 0 rgba(255,255,255,.035)}
+.dashboard-shell .card-title{color:#dcecff}
+.dashboard-shell .progress-bar{background:rgba(30,58,91,.75)}
+.dashboard-shell .progress-bar .fill{background:linear-gradient(90deg,#167cff,#28c9ff)!important;box-shadow:0 0 9px rgba(22,124,255,.32)}
+.dashboard-shell .schedule-status-item{background:rgba(8,20,35,.72);border-color:rgba(50,121,202,.24)}
+.dashboard-shell .task-item,.dashboard-shell .revision-item{border-bottom-color:rgba(45,95,145,.18)}
+.dashboard-shell .btn-primary,.dashboard-shell .action-btn{background:linear-gradient(135deg,#0f82ff,#0755c7);border-color:#1687ff;box-shadow:0 5px 18px rgba(0,111,255,.24)}
+
+.bottom-nav{
+  background:rgba(4,10,18,.88);
+  border-top-color:rgba(49,118,196,.25);
+  box-shadow:0 -10px 30px rgba(0,0,0,.22);
+}
+.bottom-nav button.active{color:#4fb7ff;text-shadow:0 0 10px rgba(31,143,255,.42)}
+
+@media(min-width:900px){
+  .app{max-width:1100px;padding:24px 28px 50px}
+  .dashboard-shell{padding:0 4px 20px;background-size:100% auto}
+  .ww-dashboard-hero{min-height:315px}
+  .ww-hero-content{padding:54px 44px}
+  .ww-hero-wolf{width:310px;max-height:285px;right:5%;bottom:-22px}
+}
+
+@media(max-width:560px){
+  .dashboard-shell{margin:0 -2px;background-size:auto 360px}
+  .ww-dashboard-hero{min-height:230px;background-position:center top;border-radius:18px}
+  .ww-hero-content{max-width:74%;padding:30px 20px}
+  .ww-hero-content h2{font-size:25px}
+  .ww-hero-content p{font-size:13px}
+  .ww-hero-kicker{font-size:8px;letter-spacing:1.2px}
+  .ww-hero-wolf{width:150px;max-height:155px;right:-8px;bottom:-8px;opacity:.72}
+}
+@media(max-width:360px){
+  .ww-dashboard-hero{min-height:215px}
+  .ww-hero-content{padding:26px 16px;max-width:76%}
+  .ww-hero-content h2{font-size:22px}
+  .ww-hero-wolf{width:125px;opacity:.62}
+}
+
+/* ============================================================
+   WHITE WOLF V40.1 — CINEMATIC MOUNTAIN / PREMIUM UI
+   Final visual layer: clear mountain hero + readable content
+   ============================================================ */
+:root{
+  --ww-bg-deep:#040914;
+  --ww-bg:#07101d;
+  --ww-surface:rgba(7,18,32,.82);
+  --ww-surface-2:rgba(5,14,27,.92);
+  --ww-line:rgba(74,150,235,.24);
+  --ww-line-strong:rgba(49,146,255,.52);
+  --ww-blue:#1687ff;
+  --ww-cyan:#42d5ff;
+  --ww-text:#edf6ff;
+  --ww-muted:#9bb5d3;
+}
+
+html,body{background:var(--ww-bg-deep)!important}
+body{
+  background:
+    radial-gradient(900px 480px at 72% 0%,rgba(13,92,178,.14),transparent 70%),
+    linear-gradient(180deg,#050b15 0%,#07111e 52%,#040914 100%)!important;
+}
+body::before{display:none!important}
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 78% 14%,rgba(35,150,255,.08),transparent 26%),
+    radial-gradient(circle at 18% 70%,rgba(16,88,170,.055),transparent 30%),
+    linear-gradient(180deg,transparent 55%,rgba(2,6,13,.42) 100%);
+}
+
+.app{
+  background:transparent!important;
+}
+
+.header{
+  background:linear-gradient(180deg,rgba(7,17,30,.92),rgba(5,13,24,.82))!important;
+  border:1px solid rgba(70,137,215,.24)!important;
+  box-shadow:0 16px 42px rgba(0,0,0,.30),inset 0 1px 0 rgba(255,255,255,.035)!important;
+}
+
+.dashboard-shell{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  padding:0 0 24px!important;
+  border-radius:24px;
+  background:
+    linear-gradient(180deg,rgba(5,12,22,.02) 0%,rgba(5,12,22,.18) 30%,rgba(5,12,22,.72) 67%,#040914 100%)!important;
+}
+.dashboard-shell::before{
+  content:"";
+  position:absolute;
+  z-index:-2;
+  top:0;
+  left:0;
+  right:0;
+  height:430px;
+  background-image:url('mountain-bg.jpg');
+  background-size:cover;
+  background-position:center top;
+  background-repeat:no-repeat;
+  opacity:.96;
+  pointer-events:none;
+  border-radius:24px 24px 0 0;
+}
+.dashboard-shell::after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  top:0;
+  left:0;
+  right:0;
+  height:500px;
+  pointer-events:none;
+  background:
+    linear-gradient(90deg,rgba(3,9,17,.92) 0%,rgba(3,9,17,.66) 31%,rgba(3,9,17,.12) 68%,rgba(3,9,17,.30) 100%),
+    linear-gradient(180deg,rgba(3,9,17,.04) 0%,rgba(3,9,17,.08) 42%,rgba(3,9,17,.86) 100%);
+  border-radius:24px 24px 0 0;
+}
+
+.ww-dashboard-hero{
+  min-height:320px!important;
+  margin:0 0 18px!important;
+  border:1px solid rgba(55,145,245,.34)!important;
+  border-radius:22px!important;
+  background:transparent!important;
+  box-shadow:0 22px 55px rgba(0,0,0,.30),0 0 34px rgba(17,120,255,.07)!important;
+}
+.ww-dashboard-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 74% 30%,rgba(37,167,255,.10),transparent 28%),
+    linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.16));
+  pointer-events:none;
+}
+.ww-hero-overlay{
+  background:linear-gradient(90deg,rgba(3,9,17,.82) 0%,rgba(3,9,17,.52) 34%,rgba(3,9,17,.05) 72%,rgba(3,9,17,.22) 100%)!important;
+}
+.ww-hero-content{
+  max-width:55%!important;
+  padding:58px 42px!important;
+}
+.ww-hero-kicker{
+  color:#70c5ff!important;
+  letter-spacing:1.9px!important;
+}
+.ww-hero-content h2{
+  font-size:clamp(28px,4.2vw,42px)!important;
+  color:#f5f9ff!important;
+  text-shadow:0 3px 25px rgba(0,0,0,.72)!important;
+}
+.ww-hero-content p{
+  color:#c0d6ee!important;
+  font-size:16px!important;
+  text-shadow:0 2px 12px rgba(0,0,0,.65);
+}
+.ww-hero-wolf{
+  width:min(235px,31%)!important;
+  max-height:235px!important;
+  right:6%!important;
+  bottom:-12px!important;
+  opacity:.78!important;
+  filter:drop-shadow(0 0 22px rgba(15,130,255,.40))!important;
+}
+
+.dashboard-shell>.card,
+.dashboard-shell>.notif-widget,
+.dashboard-shell>.err-widget{
+  margin-left:0;
+  margin-right:0;
+}
+.dashboard-shell .card{
+  background:linear-gradient(145deg,rgba(7,19,34,.90),rgba(4,12,23,.94))!important;
+  border:1px solid rgba(57,124,202,.25)!important;
+  box-shadow:0 12px 32px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.028)!important;
+  backdrop-filter:blur(14px)!important;
+  -webkit-backdrop-filter:blur(14px)!important;
+}
+.dashboard-shell .card:hover{
+  transform:translateY(-1px);
+  border-color:rgba(44,151,255,.48)!important;
+  box-shadow:0 18px 38px rgba(0,54,125,.20),0 0 20px rgba(16,126,255,.055),inset 0 1px 0 rgba(255,255,255,.035)!important;
+}
+.dashboard-shell .progress-bar{
+  background:rgba(26,52,80,.72)!important;
+}
+.dashboard-shell .progress-bar .fill{
+  background:linear-gradient(90deg,#0879ff,#36d1ff)!important;
+  box-shadow:0 0 11px rgba(24,145,255,.34)!important;
+}
+.dashboard-shell .schedule-status-item{
+  background:rgba(7,20,36,.78)!important;
+  border-color:rgba(57,125,205,.24)!important;
+}
+
+.bottom-nav{
+  background:linear-gradient(180deg,rgba(4,11,20,.88),rgba(3,8,15,.96))!important;
+  border-top:1px solid rgba(57,126,205,.24)!important;
+  box-shadow:0 -14px 34px rgba(0,0,0,.32)!important;
+  backdrop-filter:blur(18px)!important;
+}
+
+@media(min-width:900px){
+  .app{max-width:1180px!important;padding:24px 30px 58px!important}
+  .dashboard-shell::before{height:470px;background-position:center top}
+  .dashboard-shell::after{height:540px}
+  .ww-dashboard-hero{min-height:330px!important}
+  .ww-hero-content{padding:62px 46px!important}
+}
+
+@media(max-width:700px){
+  .dashboard-shell{border-radius:18px}
+  .dashboard-shell::before{height:340px;background-size:auto 340px;background-position:58% top}
+  .dashboard-shell::after{height:410px;background:linear-gradient(90deg,rgba(3,9,17,.82),rgba(3,9,17,.34)),linear-gradient(180deg,rgba(3,9,17,.05),rgba(3,9,17,.88) 100%)}
+  .ww-dashboard-hero{min-height:270px!important;border-radius:18px!important}
+  .ww-hero-content{max-width:72%!important;padding:40px 22px!important}
+  .ww-hero-content h2{font-size:25px!important}
+  .ww-hero-content p{font-size:13px!important}
+  .ww-hero-wolf{width:132px!important;max-height:140px!important;right:-2px!important;bottom:-5px!important;opacity:.66!important}
+}
+@media(max-width:430px){
+  .dashboard-shell::before{height:300px;background-size:auto 300px;background-position:57% top}
+  .dashboard-shell::after{height:370px}
+  .ww-dashboard-hero{min-height:245px!important}
+  .ww-hero-content{max-width:78%!important;padding:31px 17px!important}
+  .ww-hero-kicker{font-size:8px!important}
+  .ww-hero-content h2{font-size:22px!important;line-height:1.16}
+  .ww-hero-content p{font-size:12px!important}
+  .ww-hero-wolf{width:108px!important;opacity:.55!important}
+}
