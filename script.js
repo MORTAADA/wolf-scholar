@@ -5,6 +5,87 @@
 (function(){
 'use strict';
 
+
+// ============================================================
+//  WHITE WOLF ICON SYSTEM — Emoji-free professional UI
+//  Converts legacy emoji labels/data into consistent inline SVG icons.
+// ============================================================
+var WW_ICON_PATHS = {
+  wolf:'<path d="M4 7.5 8.5 4l3.5 2 4-2 4 3.5-1 7.5-7 4-7-4z"/><path d="M8 13.5h.01M16 13.5h.01M9 17c2 1.2 4 1.2 6 0"/>',
+  chat:'<path d="M5 5.5h14v10H9l-4 3v-3H5z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/>',
+  light:'<path d="M9 18h6M10 21h4"/><path d="M8.5 14.5a6 6 0 1 1 7 0c-.8.6-1.5 1.5-1.5 2.5h-5c0-1-.7-1.9-1.5-2.5Z"/>',
+  graduation:'<path d="m3 9 9-5 9 5-9 5z"/><path d="M7 11v5c2.8 2 7.2 2 10 0v-5M21 10v5"/>',
+  globe:'<circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.2 2.3 3.2 5.1 3.2 8.5s-1 6.2-3.2 8.5c-2.2-2.3-3.2-5.1-3.2-8.5s1-6.2 3.2-8.5Z"/>',
+  code:'<path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/>',
+  python:'<path d="M12 3c-3.5 0-4.5 1.3-4.5 3.5V9H12v1.5H6C3.8 10.5 3 12 3 14.5S4.2 18 6.5 18H9v-3.5c0-2.2 1.2-3.5 3.5-3.5h3V7c0-2.2-1.5-4-3.5-4Z"/><path d="M12 21c3.5 0 4.5-1.3 4.5-3.5V15H12v-1.5h6c2.2 0 3 1.5 3 4S19.8 21 17.5 21H15v-3.5c0-2.2-1.2-3.5-3.5-3.5h-3V17c0 2.2 1.5 4 3.5 4Z"/>',
+  coffee:'<path d="M5 8h11v6a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4zM16 10h2a2 2 0 0 1 0 4h-2M7 5c0-1 1-1 1-2M11 5c0-1 1-1 1-2"/>',
+  tools:'<path d="m14.5 6.5 3-3 3 3-3 3zM4 20l8.5-8.5M6 14l4 4M4 4l6 6"/>',
+  flag:'<path d="M6 21V4"/><path d="M6 5c4-3 6 3 12 0v8c-6 3-8-3-12 0"/>',
+  book:'<path d="M5 4.5A2.5 2.5 0 0 1 7.5 2H20v17H7.5A2.5 2.5 0 0 0 5 21.5z"/><path d="M5 4.5v17M8 6h8M8 10h7"/>',
+  calendar:'<rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M7 3v4M17 3v4M3.5 9h17"/>',
+  chart:'<path d="M4 19V9M9 19V5M14 19v-8M19 19V3"/>',
+  seed:'<path d="M12 20V10"/><path d="M12 13c-5 0-7-3-7-7 4 0 7 2 7 7ZM12 10c0-4 3-7 7-7 0 4-2 7-7 7Z"/>',
+  clipboard:'<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V2h6v2M8 9h8M8 13h8M8 17h5"/>',
+  resources:'<path d="M4 6.5h6l2 2h8v10H4z"/><path d="M4 9h16"/>',
+  bell:'<path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9ZM10 21h4"/>',
+  settings:'<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.8 1.8 0 0 0 .3 2l.1.1-1.8 1.8-.1-.1a1.8 1.8 0 0 0-2-.3 1.8 1.8 0 0 0-1.1 1.6v.2h-2.6v-.2a1.8 1.8 0 0 0-1.1-1.6 1.8 1.8 0 0 0-2 .3l-.1.1-1.8-1.8.1-.1a1.8 1.8 0 0 0 .3-2 1.8 1.8 0 0 0-1.6-1.1h-.2v-2.6H6a1.8 1.8 0 0 0 1.6-1.1 1.8 1.8 0 0 0-.3-2l-.1-.1L9 6.3l.1.1a1.8 1.8 0 0 0 2 .3A1.8 1.8 0 0 0 12.2 5v-.2h2.6V5a1.8 1.8 0 0 0 1.1 1.6 1.8 1.8 0 0 0 2-.3l.1-.1 1.8 1.8-.1.1a1.8 1.8 0 0 0-.3 2 1.8 1.8 0 0 0 1.6 1.1h.2v2.6H21a1.8 1.8 0 0 0-1.6 1.2Z"/>',
+  check:'<path d="m5 12 4 4L19 6"/>',
+  close:'<path d="m6 6 12 12M18 6 6 18"/>',
+  plus:'<path d="M12 5v14M5 12h14"/>',
+  search:'<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/>',
+  file:'<path d="M6 3h7l5 5v13H6z"/><path d="M13 3v5h5M9 13h6M9 17h6"/>',
+  image:'<rect x="4" y="4" width="16" height="16" rx="2"/><circle cx="9" cy="9" r="1.5"/><path d="m5 17 4-4 3 3 2-2 5 4"/>',
+  video:'<rect x="3" y="5" width="14" height="14" rx="2"/><path d="m17 10 4-2v8l-4-2z"/>',
+  audio:'<path d="M5 9v6h4l5 4V5L9 9zM17 9a5 5 0 0 1 0 6M19 6a9 9 0 0 1 0 12"/>',
+  link:'<path d="M10 13a5 5 0 0 0 7.1.1l2-2a5 5 0 0 0-7.1-7.1l-1.2 1.2"/><path d="M14 11a5 5 0 0 0-7.1-.1l-2 2A5 5 0 0 0 7 20l1.2-1.2"/>',
+  folder:'<path d="M3 6h7l2 2h9v11H3z"/>',
+  clock:'<circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3 2"/>',
+  target:'<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/>',
+  fire:'<path d="M12 21c4 0 7-2.8 7-7 0-3.2-1.8-5.7-4.8-8.5.2 2.5-1 3.8-2.4 4.8.2-3.1-1.3-5.7-3.8-7.3.2 3.8-3 5.5-3 10 0 4.2 3 8 7 8Z"/>',
+  trophy:'<path d="M7 4h10v4a5 5 0 0 1-10 0zM4 5h3v3a4 4 0 0 1-3-3ZM20 5h-3v3a4 4 0 0 0 3-3ZM12 13v4M8 21h8M9 17h6"/>',
+  star:'<path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9z"/>',
+  info:'<circle cx="12" cy="12" r="8.5"/><path d="M12 10v6M12 7h.01"/>',
+  help:'<circle cx="12" cy="12" r="8.5"/><path d="M9.5 9a2.7 2.7 0 1 1 4.3 2.2c-1.2.8-1.8 1.3-1.8 2.8M12 17h.01"/>',
+  pause:'<path d="M9 5v14M15 5v14"/>',
+  play:'<path d="m8 5 11 7-11 7z"/>',
+  reset:'<path d="M5 8a8 8 0 1 1-1 7"/><path d="M5 4v4h4"/>',
+  spark:'<path d="m12 3 1.5 6.5L20 12l-6.5 1.5L12 20l-1.5-6.5L4 12l6.5-2.5z"/>'
+};
+var WW_EMOJI_ICON = {
+  '🐺':'wolf','💬':'chat','💡':'light','🎓':'graduation','🌐':'globe','🐍':'python','☕':'coffee','🔧':'tools',
+  '🇩🇪':'flag','🇬🇧':'flag','🇪🇸':'flag','📚':'book','📖':'book','📅':'calendar','📊':'chart','📈':'chart','🌱':'seed',
+  '📋':'clipboard','📁':'folder','📄':'file','📝':'file','🖼️':'image','🎥':'video','🎵':'audio','🔗':'link','🔔':'bell',
+  '⚙️':'settings','⚙':'settings','✕':'close','❌':'close','➕':'plus','🔍':'search','⏰':'clock','⏱️':'clock','⏱':'clock',
+  '🎯':'target','🔥':'fire','🏆':'trophy','⭐':'star','ℹ️':'info','ℹ':'info','🤔':'help','⏸️':'pause','▶️':'play','➤':'play',
+  '🔴':'target','⏳':'clock','💪':'trophy','🌟':'star','🎉':'trophy','🧠':'light','📬':'resources','🛌':'pause','💻':'code',
+  '🟢':'check','🟡':'clock','☑️':'check','✅':'check','❌':'close'
+};
+function wwSvgIcon(name, extra){
+  var path=WW_ICON_PATHS[name]||WW_ICON_PATHS.spark;
+  return '<span class="ww-icon '+(extra||'')+'" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">'+path+'</svg></span>';
+}
+function wwReplaceEmojiInElement(root){
+  if(!root||!document.createTreeWalker)return;
+  var walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);
+  var nodes=[]; while(walker.nextNode()) nodes.push(walker.currentNode);
+  var emojiRe=/(🇩🇪|🇬🇧|🇪🇸|🐺|💬|💡|🎓|🌐|🐍|☕|🔧|📚|📖|📅|📊|📈|🌱|📋|📁|📄|📝|🖼️|🎥|🎵|🔗|🔔|⚙️|⚙|✕|❌|➕|🔍|⏰|⏱️|⏱|🎯|🔥|🏆|⭐|ℹ️|ℹ|🤔|⏸️|▶️|➤|🔴|⏳|💪|🌟|🎉|🧠|📬|🛌|💻|🟢|🟡|☑️|✅)/g;
+  nodes.forEach(function(node){
+    if(node.parentElement&&node.parentElement.closest('.ww-icon')) return;
+    var text=node.nodeValue; if(!emojiRe.test(text)){emojiRe.lastIndex=0;return;} emojiRe.lastIndex=0;
+    var frag=document.createDocumentFragment(), last=0, m;
+    while((m=emojiRe.exec(text))){
+      if(m.index>last) frag.appendChild(document.createTextNode(text.slice(last,m.index)));
+      var key=WW_EMOJI_ICON[m[0]]||'spark'; var holder=document.createElement('span'); holder.innerHTML=wwSvgIcon(key,'ww-icon-inline');
+      frag.appendChild(holder.firstElementChild); last=m.index+m[0].length;
+    }
+    if(last<text.length) frag.appendChild(document.createTextNode(text.slice(last)));
+    node.parentNode.replaceChild(frag,node);
+  });
+}
+function wwUpgradeIcons(root){
+  try{wwReplaceEmojiInElement(root||document.body)}catch(e){console.warn('Icon upgrade error',e)}
+}
+
 // ============================================================
 //  MASTER APCE
 // ============================================================
@@ -766,12 +847,12 @@ function filterResources(all){var list=all;if(state.resFilter!=='Tout'){if(state
 // ============================================================
 //  RENDER MAIN
 // ============================================================
-function render(){try{var root=document.getElementById('root');if(!root)return;if(!state.onboardingDone){root.innerHTML=renderOnboarding();attachOnboarding();return}updateNotifications();root.innerHTML=renderApp();attachAppEvents()}catch(e){console.error('Render error:',e);var root=document.getElementById('root');if(root)root.innerHTML='<div style="padding:20px;color:#e86a6a;"><h2>⚠️ Erreur</h2><pre style="font-size:12px;white-space:pre-wrap;">'+e.message+'</pre><button onclick="location.reload()" style="margin-top:20px;background:#2a3f60;color:#fff;border:none;padding:10px 20px;border-radius:10px;">Recharger</button></div>'}}
+function render(){try{var root=document.getElementById('root');if(!root)return;if(!state.onboardingDone){root.innerHTML=renderOnboarding();wwUpgradeIcons(root);attachOnboarding();return}updateNotifications();root.innerHTML=renderApp();wwUpgradeIcons(root);attachAppEvents()}catch(e){console.error('Render error:',e);var root=document.getElementById('root');if(root)root.innerHTML='<div style="padding:20px;color:#e86a6a;"><h2>⚠️ Erreur</h2><pre style="font-size:12px;white-space:pre-wrap;">'+e.message+'</pre><button onclick="location.reload()" style="margin-top:20px;background:#2a3f60;color:#fff;border:none;padding:10px 20px;border-radius:10px;">Recharger</button></div>'}}
 
 function renderOnboarding(){
   var step=state.onboardingStep||0;
   var content='';
-  if(step===0){content='<div class="onboarding-step-content"><div class="onboarding-icon">🐺</div><h1 class="onboarding-title">White Wolf Scholar</h1><p class="onboarding-subtitle">Study → Track → Analyze → Master</p><div class="onboarding-features"><div class="onboarding-feature"><span class="of-icon">📚</span><span class="of-text"><strong>Master APCE</strong> — 9 matières</span></div><div class="onboarding-feature"><span class="of-icon">🌱</span><span class="of-text"><strong>3 langues</strong> — A1 → C1</span></div><div class="onboarding-feature"><span class="of-icon">🤖</span><span class="of-text"><strong>Chatbot IA</strong> — 12 capacités</span></div><div class="onboarding-feature"><span class="of-icon">📊</span><span class="of-text"><strong>Stats avancées</strong> — Heatmap + Charts</span></div></div><button class="onboarding-btn" data-onboard-next>Suivant →</button></div>'}
+  if(step===0){content='<div class="onboarding-step-content"><div class="onboarding-icon onboarding-logo-v2"><img src="logo-v2-icon-centered.png" alt="White Wolf Scholar"></div><h1 class="onboarding-title">White Wolf Scholar</h1><p class="onboarding-subtitle">Study → Track → Analyze → Master</p><div class="onboarding-features"><div class="onboarding-feature"><span class="of-icon">📚</span><span class="of-text"><strong>Master APCE</strong> — 9 matières</span></div><div class="onboarding-feature"><span class="of-icon">🌱</span><span class="of-text"><strong>3 langues</strong> — A1 → C1</span></div><div class="onboarding-feature"><span class="of-icon">🤖</span><span class="of-text"><strong>Chatbot IA</strong> — 12 capacités</span></div><div class="onboarding-feature"><span class="of-icon">📊</span><span class="of-text"><strong>Stats avancées</strong> — Heatmap + Charts</span></div></div><button class="onboarding-btn" data-onboard-next>Suivant →</button></div>'}
   else if(step===1){content='<div class="onboarding-step-content"><div class="onboarding-icon">🎯</div><h1 class="onboarding-title">Ton objectif</h1><p class="onboarding-subtitle">Quel est ton but principal ?</p><div class="onboarding-goal-options"><div class="onboarding-goal '+(state.onboardingData.goal==='study'?'selected':'')+'" data-onboard-goal="study"><span class="og-icon">📚</span><span class="og-label">Étudier</span></div><div class="onboarding-goal '+(state.onboardingData.goal==='lang'?'selected':'')+'" data-onboard-goal="lang"><span class="og-icon">🌍</span><span class="og-label">Apprendre langues</span></div><div class="onboarding-goal '+(state.onboardingData.goal==='code'?'selected':'')+'" data-onboard-goal="code"><span class="og-icon">💻</span><span class="og-label">Programmer</span></div><div class="onboarding-goal '+(state.onboardingData.goal==='all'?'selected':'')+'" data-onboard-goal="all"><span class="og-icon">🚀</span><span class="og-label">Tout</span></div></div><button class="onboarding-btn" data-onboard-next>Suivant →</button><button class="onboarding-btn secondary" data-onboard-prev>← Retour</button></div>'}
   else if(step===2){content='<div class="onboarding-step-content"><div class="onboarding-icon">🔔</div><h1 class="onboarding-title">Notifications</h1><p class="onboarding-subtitle">Active les rappels pour ne rien manquer</p><div class="onboarding-features"><div class="onboarding-feature"><span class="of-icon">⏰</span><span class="of-text">Rappels de cours</span></div><div class="onboarding-feature"><span class="of-icon">📝</span><span class="of-text">Alertes examens</span></div><div class="onboarding-feature"><span class="of-icon">📋</span><span class="of-text">Tâches du jour</span></div></div><button class="onboarding-btn" data-onboard-finish>🐺 Commencer →</button><button class="onboarding-skip" data-onboard-skip>Plus tard</button></div>'}
   var dots='';
@@ -787,7 +868,7 @@ function renderApp(){
   var unread=getUnreadNotificationsCount();
   var bellDot=unread>0?'<span class="notif-badge">'+unread+'</span>':'';
   return '<div class="app">'+
-    '<div class="header"><h1><span class="wolf-icon">🐺</span> White Wolf v39</h1>'+
+    '<div class="header"><h1 class="app-brand"><img class="app-logo" src="logo-v2-icon-centered.png" alt="White Wolf Scholar"> <span class="app-brand-text">White Wolf <span class="app-version">v39</span></span></h1>'+
       '<div style="position:relative;display:flex;align-items:center;gap:8px;">'+
         '<span class="settings-btn" id="notif-trigger" style="position:relative;">🔔'+bellDot+'</span>'+
         '<span class="settings-btn" id="settings-trigger">⚙️</span>'+
@@ -830,7 +911,16 @@ function renderDashboard(){
   var errDue=getErrorsDueToday().length;
   var notifs=state.notifications||[];
   var urgentNotifs=notifs.filter(function(n){return n.type==='urgent'||n.type==='warning'});
-  return '<div>'+
+  var wwHero='<section class="ww-dashboard-hero">'+
+    '<div class="ww-hero-overlay"></div>'+
+    '<div class="ww-hero-content">'+
+      '<div class="ww-hero-kicker"><span class="ww-hero-line"></span> WHITE WOLF / STUDY SYSTEM</div>'+
+      '<h2>White Wolf Scholar <span>v39</span></h2>'+
+      '<p>Focus today,<br><span class="hero-motto-accent">Win tomorrow</span></p>'+
+    '</div>'+
+    
+  '</section>';
+  return '<div class="dashboard-shell">'+wwHero+
     (urgentNotifs.length>0?'<div class="notif-widget" data-modal="notifications"><div class="nw-top"><span class="nw-icon">🔔</span><span class="nw-title">Notifications</span><span class="nw-count">'+urgentNotifs.length+'</span></div><div class="nw-list">'+urgentNotifs.slice(0,3).map(function(n){return '<div class="nw-item"><span class="nw-item-dot '+(n.type==='urgent'?'urgent':n.type==='warning'?'warning':'info')+'"></span>'+n.icon+' '+n.title+'</div>'}).join('')+'</div></div>':'')+
     '<div class="card" style="padding:14px;"><div class="card-title" style="margin-bottom:8px;">📋 Emploi du temps</div><div class="schedule-status-container">'+
       (sc.currentClass?'<div class="schedule-status-item"><div class="status-icon">🔴</div><div><div class="status-text">En cours : '+sc.currentClass.subject+'</div><div class="status-sub">'+sc.currentClass.start+' - '+sc.currentClass.end+'</div></div></div>':'')+
@@ -1039,7 +1129,7 @@ function renderResources(){
 function renderModal(){
   var m=state.modal;if(!m)return '';
   if(m.type==='notifications'){var notifs=state.notifications||[];var unread=notifs.filter(function(n){return !state.readNotifications[n.id]});var listHTML='';if(notifs.length===0){listHTML='<div class="notif-empty"><div class="ne-icon">🔕</div><div class="ne-text">Aucune notification</div></div>'}else{listHTML='<div class="notif-list">'+notifs.map(function(n){var isRead=state.readNotifications[n.id];return '<div class="notif-item '+n.type+'" style="'+(isRead?'opacity:.5':'')+'"><div class="ni-icon">'+n.icon+'</div><div class="ni-content"><div class="ni-title">'+n.title+'</div><div class="ni-meta">'+n.text+'</div></div></div>'}).join('')+'</div>'}var clearBtn=unread.length>0?'<button class="btn-outline btn-small" data-mark-all-read style="margin-bottom:12px;">✅ Tout marquer comme lu</button>':'';return '<div class="modal-overlay"><div class="modal-content"><span class="close-btn" data-close-modal>❌</span><h3>📬 Notifications</h3>'+clearBtn+listHTML+'<div class="modal-actions"><button class="btn-primary" data-close-modal>Fermer</button></div></div></div>'}
-  if(m.type==='about'){return '<div class="modal-overlay"><div class="modal-content"><span class="close-btn" data-close-modal>❌</span><h3>ℹ️ À propos</h3><div style="text-align:center;padding:10px 0;"><div style="font-size:64px;">🐺</div><div style="font-weight:600;font-size:22px;">White Wolf Scholar</div><div class="text-muted">Version 39 — Advanced Stats</div><div class="text-muted text-small" style="margin-top:8px;">+ Heatmap · Charts · Analyse avancée</div></div><div class="modal-actions"><button class="btn-primary" data-close-modal>Fermer</button></div></div></div>'}
+  if(m.type==='about'){return '<div class="modal-overlay"><div class="modal-content"><span class="close-btn" data-close-modal>❌</span><h3>ℹ️ À propos</h3><div style="text-align:center;padding:10px 0;"><img src="logo-v2.png" alt="White Wolf Scholar" style="width:min(100%,280px);height:auto;aspect-ratio:1/1;object-fit:contain;margin:0 auto 10px;display:block;border-radius:16px;"><div style="font-weight:600;font-size:22px;">White Wolf Scholar</div><div class="text-muted">Version 39 — Advanced Stats</div><div class="text-muted text-small" style="margin-top:8px;">+ Heatmap · Charts · Analyse avancée</div></div><div class="modal-actions"><button class="btn-primary" data-close-modal>Fermer</button></div></div></div>'}
   if(m.type==='task'){var today=new Date().toISOString().slice(0,10);return '<div class="modal-overlay"><div class="modal-content"><span class="close-btn" data-close-modal>❌</span><h3>➕ Nouvelle tâche</h3><div style="display:grid;gap:12px;"><input id="task-text" placeholder="Description" autofocus><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;"><div><label>📅 Date</label><input type="date" id="task-date" value="'+today+'"></div><div><label>⏰ Heure</label><input type="time" id="task-time" value="09:00"></div></div><div><label>🎯 Priorité</label><select id="task-priority"><option value="Basse">🟢 Basse</option><option value="Moyenne" selected>🟡 Moyenne</option><option value="Haute">🔴 Haute</option></select></div></div><div class="modal-actions"><button class="btn-outline" data-close-modal>Annuler</button><button class="btn-primary" data-save-task>✅ Enregistrer</button></div></div></div>'}
   if(m.type==='exam'){var today2=new Date().toISOString().slice(0,10);return '<div class="modal-overlay"><div class="modal-content"><span class="close-btn" data-close-modal>❌</span><h3>📝 Nouvel examen</h3><div style="display:grid;gap:12px;"><input id="exam-title" placeholder="Titre" autofocus><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;"><div><label>📅 Date</label><input type="date" id="exam-date" value="'+today2+'"></div><div><label>⏰ Heure</label><input type="time" id="exam-time" value="09:00"></div></div><div><label>📚 Matière</label><select id="exam-subject"><option value="">Aucune</option>'+state.subjects.map(function(s){return '<option value="'+s.id+'">'+s.name+'</option>'}).join('')+'</select></div><textarea id="exam-notes" rows="2" placeholder="Notes"></textarea></div><div class="modal-actions"><button class="btn-outline" data-close-modal>Annuler</button><button class="btn-primary" data-save-exam>✅ Enregistrer</button></div></div></div>'}
   if(m.type==='folder'){return '<div class="modal-overlay"><div class="modal-content"><span class="close-btn" data-close-modal>❌</span><h3>📁 Nouveau dossier</h3><div style="display:grid;gap:12px;"><select id="folder-subject"><option value="">Choisir matière</option>'+state.subjects.map(function(s){return '<option value="'+s.id+'">'+s.name+'</option>'}).join('')+'</select><input id="folder-name" placeholder="Nom du dossier"></div><div class="modal-actions"><button class="btn-outline" data-close-modal>Annuler</button><button class="btn-primary" data-save-folder>Enregistrer</button></div></div></div>'}
@@ -1130,7 +1220,7 @@ var chatMsgs=document.getElementById('chatbot-messages');
 var chatInput=document.getElementById('chatbot-input');
 var botState={context:{awaitingAnswer:false,currentQuestionIndex:0,currentQuizQuestions:[],quizScore:0,quizTotal:0,lastQuiz:null}};
 
-function addMessage(text,sender){if(!chatMsgs)return;var d=document.createElement('div');d.className='message '+sender;d.innerHTML=text.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>').replace(/\n/g,'<br>');chatMsgs.appendChild(d);chatMsgs.scrollTop=chatMsgs.scrollHeight}
+function addMessage(text,sender){if(!chatMsgs)return;var d=document.createElement('div');d.className='message '+sender;d.innerHTML=text.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>').replace(/\n/g,'<br>');chatMsgs.appendChild(d);wwUpgradeIcons(d);chatMsgs.scrollTop=chatMsgs.scrollHeight}
 function showTyping(){if(!chatMsgs)return;var div=document.createElement('div');div.className='typing-indicator';div.id='typing-indicator';div.innerHTML='<span></span><span></span><span></span>';chatMsgs.appendChild(div);chatMsgs.scrollTop=chatMsgs.scrollHeight}
 function hideTyping(){var i=document.getElementById('typing-indicator');if(i)i.remove()}
 
@@ -1160,7 +1250,7 @@ if(chatMsgs){
 
 setInterval(function(){if(state.onboardingDone){updateNotifications()}},60000);
 
-async function init(){try{await openDB();await loadState();render()}catch(e){console.error('Init error:',e);var root=document.getElementById('root');if(root)root.innerHTML='<div style="padding:20px;color:#e86a6a;"><h2>⚠️ Erreur</h2><pre>'+e.message+'</pre><button onclick="location.reload()">Recharger</button></div>'}}
+async function init(){try{await openDB();await loadState();wwUpgradeIcons(document.body);render()}catch(e){console.error('Init error:',e);var root=document.getElementById('root');if(root)root.innerHTML='<div style="padding:20px;color:#e86a6a;"><h2>⚠️ Erreur</h2><pre>'+e.message+'</pre><button onclick="location.reload()">Recharger</button></div>'}}
 
 init();
 
