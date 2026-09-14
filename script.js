@@ -1,5 +1,5 @@
 // ============================================================
-//  WHITE WOLF SCHOLAR — SCRIPT V39
+//  WHITE WOLF SCHOLAR — SCRIPT 
 //  Full with Advanced Stats (Heatmap + Charts)
 // ============================================================
 (function(){
@@ -250,102 +250,81 @@ var LANGUAGES = [
       }
     }
   },
-  {id:'en',flag:'🇬🇧',name:'English',nameAr:'الإنجليزية',goal:'C1',goalLabel:'C1 — إتقان',
+  {id:'en',flag:'🇬🇧',name:'English',nameAr:'الإنجليزية',startLevel:'B2',goal:'C2',goalLabel:'C2 — إتقان كامل',
     levels:{
-      A1:{label:'A1 — مبتدئ',description:'في نهاية هذا المستوى:',canDo:['التقديم','أسئلة','مواقف','فهم'],duration:'40-60 ساعة',pace:'3 دروس',
+      B2:{label:'B2 — متقدم',description:'الانطلاق من مستواك الحالي B2 نحو C2:',canDo:['فهم النصوص المعقدة','التحدث بطلاقة','التعبير عن الآراء بدقة','الكتابة الأكاديمية والمهنية'],duration:'120-180 ساعة',pace:'4-5 دروس',
         lessons:[
-          {num:1,title:'Alphabet',sub:'النطق',learn:['26 letters','Vowels','Consonants'],video:{title:'Alphabet',url:'https://www.youtube.com/results?search_query=english+alphabet',channel:'BBC Learning'}},
-          {num:2,title:'Greetings',sub:'التحيات',learn:['Hello','Good morning'],video:{title:'Greetings',url:'https://www.youtube.com/results?search_query=english+greetings',channel:'BBC Learning'}},
-          {num:3,title:'Introducing Yourself',sub:'التعريف',learn:['My name is','I am from'],video:{title:'Introduce',url:'https://www.youtube.com/results?search_query=introduce',channel:'Lucy'}},
-          {num:4,title:'Numbers',sub:'الأرقام',learn:['0-20','Tens','نطق'],video:{title:'Numbers',url:'https://www.youtube.com/results?search_query=english+numbers',channel:'BBC Learning'}},
-          {num:5,title:'Articles',sub:'الأدوات',learn:['a/an/the','الجمع'],video:{title:'Articles',url:'https://www.youtube.com/results?search_query=english+articles',channel:'Lucy'}},
-          {num:6,title:'To Be',sub:'أفعال',learn:['to be','to have'],video:{title:'To Be',url:'https://www.youtube.com/results?search_query=english+to+be',channel:'BBC Learning'}},
-          {num:7,title:'Present Simple',sub:'المضارع',learn:['التكوين','النفي'],video:{title:'Present',url:'https://www.youtube.com/results?search_query=present+simple',channel:'Lucy'}},
-          {num:8,title:'Vocabulary',sub:'مفردات',learn:['Colors','Family','Food'],video:{title:'Vocab',url:'https://www.youtube.com/results?search_query=english+vocab',channel:'BBC Learning'}},
-          {num:9,title:'Sentences',sub:'جمل',learn:['SVO','Questions'],video:{title:'Sentences',url:'https://www.youtube.com/results?search_query=english+sentences',channel:'BBC Learning'}},
-          {num:10,title:'Test A1',sub:'الاختبار',learn:['مراجعة','A2'],video:{title:'A1 Test',url:'https://www.youtube.com/results?search_query=english+A1',channel:'BBC Learning'}}
-        ],resources:{books:[{title:'English File A1',author:'Oxford',sub:'الأساسي'}],youtube:[{title:'BBC Learning',sub:'رسمي'},{title:'Lucy',sub:'مبسط'}],apps:[{title:'Duolingo',sub:'تمارين'}],websites:[{title:'BBC Learning',sub:'مجاني'}]}
+          {num:1,title:'Advanced Tenses',sub:'الأزمنة المتقدمة',learn:['Future Perfect','Future Continuous','Mixed time references'],video:{title:'Advanced English Tenses B2',url:'https://www.youtube.com/results?search_query=advanced+english+tenses+B2',channel:'BBC Learning English'}},
+          {num:2,title:'Mixed Conditionals',sub:'الجمل الشرطية المختلطة',learn:['Mixed Type 2/3','Regret and hypothetical meaning'],video:{title:'Mixed Conditionals B2',url:'https://www.youtube.com/results?search_query=mixed+conditionals+B2',channel:'BBC Learning English'}},
+          {num:3,title:'Advanced Passive',sub:'المبني للمجهول المتقدم',learn:['Complex passive structures','Reporting passive'],video:{title:'Advanced Passive B2',url:'https://www.youtube.com/results?search_query=advanced+passive+voice+B2',channel:'BBC Learning English'}},
+          {num:4,title:'Inversion',sub:'القلب في الجملة',learn:['Negative inversion','Never/Rarely/Seldom'],video:{title:'Inversion B2 English',url:'https://www.youtube.com/results?search_query=english+inversion+B2',channel:'BBC Learning English'}},
+          {num:5,title:'Cleft Sentences',sub:'الجمل المشقوقة',learn:['It-clefts','Wh-clefts','Emphasis'],video:{title:'Cleft Sentences B2',url:'https://www.youtube.com/results?search_query=cleft+sentences+B2',channel:'BBC Learning English'}},
+          {num:6,title:'Advanced Phrasal Verbs',sub:'الأفعال المركبة',learn:['Three-part verbs','Idiomatic usage'],video:{title:'Advanced Phrasal Verbs',url:'https://www.youtube.com/results?search_query=advanced+phrasal+verbs+B2',channel:'BBC Learning English'}},
+          {num:7,title:'Register & Style',sub:'مستويات اللغة والأسلوب',learn:['Formal vs informal','Academic and professional register'],video:{title:'English Register and Style',url:'https://www.youtube.com/results?search_query=english+register+style+B2',channel:'British Council'}},
+          {num:8,title:'Academic Writing',sub:'الكتابة الأكاديمية',learn:['Thesis statements','Cohesion','Argument structure'],video:{title:'Academic Writing B2',url:'https://www.youtube.com/results?search_query=academic+writing+B2',channel:'British Council'}},
+          {num:9,title:'Collocations',sub:'المتلازمات اللفظية',learn:['Strong collocations','Word choice','Natural combinations'],video:{title:'English Collocations B2',url:'https://www.youtube.com/results?search_query=english+collocations+B2',channel:'BBC Learning English'}},
+          {num:10,title:'Idioms & Cultural References',sub:'التعابير والثقافة',learn:['Common idioms','Context','Cultural meaning'],video:{title:'English Idioms B2',url:'https://www.youtube.com/results?search_query=english+idioms+B2',channel:'BBC Learning English'}},
+          {num:11,title:'Debating',sub:'المناظرة',learn:['Agreeing and disagreeing','Persuasion','Counterarguments'],video:{title:'English Debating B2',url:'https://www.youtube.com/results?search_query=english+debating+B2',channel:'British Council'}},
+          {num:12,title:'Professional English',sub:'الإنجليزية المهنية',learn:['Negotiation','Presentations','Meetings'],video:{title:'Professional English B2',url:'https://www.youtube.com/results?search_query=professional+english+B2',channel:'BBC Learning English'}},
+          {num:13,title:'Literature & Film',sub:'الأدب والسينما',learn:['Themes','Character analysis','Implicit meaning'],video:{title:'English Literature B2',url:'https://www.youtube.com/results?search_query=english+literature+B2',channel:'British Council'}},
+          {num:14,title:'IELTS / TOEFL Skills',sub:'مهارات الاختبارات',learn:['Reading','Listening','Speaking','Writing'],video:{title:'IELTS B2 Skills',url:'https://www.youtube.com/results?search_query=IELTS+B2+skills',channel:'British Council'}},
+          {num:15,title:'Critical Thinking in English',sub:'التفكير النقدي',learn:['Analyze','Evaluate','Infer'],video:{title:'Critical Thinking English',url:'https://www.youtube.com/results?search_query=critical+thinking+english+B2',channel:'TED-Ed'}},
+          {num:16,title:'Advanced Listening',sub:'الاستماع المتقدم',learn:['Lectures','Podcasts','Different accents'],video:{title:'Advanced Listening B2',url:'https://www.youtube.com/results?search_query=advanced+english+listening+B2',channel:'BBC Learning English'}},
+          {num:17,title:'Advanced Writing',sub:'الكتابة المتقدمة',learn:['Essays','Reports','Cohesive paragraphs'],video:{title:'Advanced Writing B2',url:'https://www.youtube.com/results?search_query=advanced+english+writing+B2',channel:'British Council'}},
+          {num:18,title:'B2 Mastery Test',sub:'اختبار الانتقال إلى C1',learn:['Comprehensive review','Error correction','C1 readiness'],video:{title:'B2 English Test',url:'https://www.youtube.com/results?search_query=B2+English+test',channel:'British Council'}}
+        ],resources:{books:[{title:'English Grammar in Use',author:'Cambridge',sub:'مرجع قوي للمراجعة'},{title:'English File Upper-Intermediate',author:'Oxford',sub:'مستوى B2'}],youtube:[{title:'BBC Learning English',sub:'قواعد واستماع'},{title:'TED',sub:'استماع ومناقشة'}],apps:[{title:'Anki',sub:'مفردات وCollocations'}],websites:[{title:'British Council LearnEnglish',sub:'دروس واختبارات'}]}
       },
-      A2:{label:'A2 — أساسي',description:'في نهاية هذا المستوى:',canDo:['مواقف','تبادل','وصف','نصوص'],duration:'60-80 ساعة',pace:'3-4 دروس',
+      C1:{label:'C1 — متقدم جدًا',description:'الانتقال من B2 إلى استخدام أكاديمي ومهني متقدم:',canDo:['فهم معظم المحتوى الأصلي','التعبير بدقة ومرونة','إدارة نقاشات معقدة','الكتابة الأكاديمية والمهنية'],duration:'180-250 ساعة',pace:'5 دروس',
         lessons:[
-          {num:1,title:'Past Simple',sub:'الماضي',learn:['Regular','Irregular','النفي'],video:{title:'Past Simple',url:'https://www.youtube.com/results?search_query=past+simple',channel:'Lucy'}},
-          {num:2,title:'Past Continuous',sub:'المستمر',learn:['was/were+ing','الاستخدام'],video:{title:'Past Cont',url:'https://www.youtube.com/results?search_query=past+continuous',channel:'BBC'}},
-          {num:3,title:'Future',sub:'المستقبل',learn:['will','going to'],video:{title:'Future',url:'https://www.youtube.com/results?search_query=future',channel:'Lucy'}},
-          {num:4,title:'Comparatives',sub:'المقارنة',learn:['-er/more','than'],video:{title:'Compar',url:'https://www.youtube.com/results?search_query=comparatives',channel:'BBC'}},
-          {num:5,title:'Modals',sub:'الوسيطة',learn:['can/could','must/should'],video:{title:'Modals',url:'https://www.youtube.com/results?search_query=modals',channel:'Lucy'}},
-          {num:6,title:'Prepositions',sub:'حروف الجر',learn:['in/on/at','under/over'],video:{title:'Prep',url:'https://www.youtube.com/results?search_query=prepositions',channel:'BBC'}},
-          {num:7,title:'Countable',sub:'القابل للعد',learn:['some/any','much/many'],video:{title:'Countable',url:'https://www.youtube.com/results?search_query=countable',channel:'Lucy'}},
-          {num:8,title:'Present Perfect',sub:'التام',learn:['have+PII','just/already'],video:{title:'Present Perf',url:'https://www.youtube.com/results?search_query=present+perfect',channel:'BBC'}},
-          {num:9,title:'Phrasal Verbs',sub:'مركبة',learn:['get up','look for'],video:{title:'Phrasal',url:'https://www.youtube.com/results?search_query=phrasal',channel:'Lucy'}},
-          {num:10,title:'Conversations',sub:'محادثات',learn:['المطعم','التسوق','السفر'],video:{title:'Conversations',url:'https://www.youtube.com/results?search_query=daily',channel:'BBC'}},
-          {num:11,title:'Writing',sub:'الكتابة',learn:['Emails','Notes'],video:{title:'Writing',url:'https://www.youtube.com/results?search_query=writing',channel:'Lucy'}},
-          {num:12,title:'Test A2',sub:'الاختبار',learn:['مراجعة','B1'],video:{title:'A2 Test',url:'https://www.youtube.com/results?search_query=english+A2',channel:'BBC'}}
-        ],resources:{books:[{title:'English File A2',author:'Oxford',sub:'الأساسي'}],youtube:[{title:'BBC Learning',sub:'رسمي'},{title:'VOA',sub:'بطيء'}],apps:[{title:'Anki',sub:'مفردات'}],websites:[{title:'British Council',sub:'رسمي'}]}
+          {num:1,title:'Advanced Grammar Mastery',sub:'إتقان القواعد',learn:['Complex structures','Tense nuance','Subordination'],video:{title:'Advanced Grammar C1',url:'https://www.youtube.com/results?search_query=advanced+english+grammar+C1',channel:'BBC Learning English'}},
+          {num:2,title:'Academic Argumentation',sub:'الحجاج الأكاديمي',learn:['Claims','Evidence','Counterarguments'],video:{title:'Academic Argumentation C1',url:'https://www.youtube.com/results?search_query=academic+argumentation+C1',channel:'British Council'}},
+          {num:3,title:'Advanced Vocabulary',sub:'المفردات المتقدمة',learn:['Word families','Nuance','Precise word choice'],video:{title:'Advanced Vocabulary C1',url:'https://www.youtube.com/results?search_query=advanced+english+vocabulary+C1',channel:'BBC Learning English'}},
+          {num:4,title:'Literary Analysis',sub:'التحليل الأدبي',learn:['Narrative voice','Symbolism','Interpretation'],video:{title:'Literary Analysis C1',url:'https://www.youtube.com/results?search_query=literary+analysis+C1+english',channel:'TED-Ed'}},
+          {num:5,title:'Rhetoric & Persuasion',sub:'البلاغة والإقناع',learn:['Ethos','Pathos','Logos','Rhetorical devices'],video:{title:'Rhetoric and Persuasion',url:'https://www.youtube.com/results?search_query=rhetoric+persuasion+english+C1',channel:'TED-Ed'}},
+          {num:6,title:'Abstract Discussion',sub:'النقاش المجرد',learn:['Abstract concepts','Philosophical vocabulary','Nuanced opinions'],video:{title:'Advanced Discussion C1',url:'https://www.youtube.com/results?search_query=advanced+english+discussion+C1',channel:'BBC Learning English'}},
+          {num:7,title:'Scientific English',sub:'الإنجليزية العلمية',learn:['Research papers','Methodology','Scientific reporting'],video:{title:'Scientific English C1',url:'https://www.youtube.com/results?search_query=scientific+english+C1',channel:'British Council'}},
+          {num:8,title:'Leadership Communication',sub:'التواصل القيادي',learn:['Briefings','Decision language','Strategic communication'],video:{title:'Leadership Communication',url:'https://www.youtube.com/results?search_query=leadership+communication+english+C1',channel:'TED'}},
+          {num:9,title:'Native-Speed Listening',sub:'استماع بسرعة طبيعية',learn:['Fast speech','Connected speech','Accents'],video:{title:'Native English Listening C1',url:'https://www.youtube.com/results?search_query=native+english+listening+C1',channel:'BBC Learning English'}},
+          {num:10,title:'Pragmatics & Nuance',sub:'الدلالة والسياق',learn:['Tone','Implicature','Politeness'],video:{title:'English Pragmatics C1',url:'https://www.youtube.com/results?search_query=english+pragmatics+C1',channel:'British Council'}},
+          {num:11,title:'Translation & Reformulation',sub:'الترجمة وإعادة الصياغة',learn:['Arabic-English','Paraphrasing','Context'],video:{title:'Translation Skills C1',url:'https://www.youtube.com/results?search_query=translation+skills+english+C1',channel:'British Council'}},
+          {num:12,title:'Advanced Conversation',sub:'المحادثة المتقدمة',learn:['Spontaneity','Turn-taking','Debate'],video:{title:'Advanced Conversation C1',url:'https://www.youtube.com/results?search_query=advanced+english+conversation+C1',channel:'BBC Learning English'}},
+          {num:13,title:'Media Analysis',sub:'تحليل الإعلام',learn:['Bias','Framing','Persuasive language'],video:{title:'Media Analysis English',url:'https://www.youtube.com/results?search_query=media+analysis+english+C1',channel:'TED-Ed'}},
+          {num:14,title:'Creative Writing',sub:'الكتابة الإبداعية',learn:['Narrative structure','Voice','Style'],video:{title:'Creative Writing C1',url:'https://www.youtube.com/results?search_query=creative+writing+C1+english',channel:'British Council'}},
+          {num:15,title:'C1 Exam Mastery',sub:'إتقان الاختبارات',learn:['CAE','CPE','IELTS','Error analysis'],video:{title:'C1 English Exam',url:'https://www.youtube.com/results?search_query=C1+English+exam',channel:'Cambridge English'}},
+          {num:16,title:'Advanced Debate',sub:'المناظرة المتقدمة',learn:['Rebuttal','Concession','Structured argument'],video:{title:'Advanced English Debate',url:'https://www.youtube.com/results?search_query=advanced+english+debate+C1',channel:'TED'}},
+          {num:17,title:'News & Advertising',sub:'الأخبار والإعلانات',learn:['Persuasion','Headlines','Subtext'],video:{title:'News and Advertising English',url:'https://www.youtube.com/results?search_query=news+advertising+english+C1',channel:'BBC Learning English'}},
+          {num:18,title:'Professional Writing',sub:'الكتابة المهنية',learn:['Reports','Proposals','Formal correspondence'],video:{title:'Professional Writing C1',url:'https://www.youtube.com/results?search_query=professional+writing+C1',channel:'British Council'}},
+          {num:19,title:'Fluency & Naturalness',sub:'الطلاقة والطبيعية',learn:['Chunking','Discourse markers','Natural phrasing'],video:{title:'English Fluency C1',url:'https://www.youtube.com/results?search_query=english+fluency+C1',channel:'BBC Learning English'}},
+          {num:20,title:'C1 Mastery Test',sub:'اختبار الانتقال إلى C2',learn:['Comprehensive review','Precision','C2 readiness'],video:{title:'C1 English Test',url:'https://www.youtube.com/results?search_query=C1+English+test',channel:'Cambridge English'}}
+        ],resources:{books:[{title:'Advanced Grammar in Use',author:'Cambridge',sub:'قواعد C1-C2'},{title:'English Vocabulary in Use Advanced',author:'Cambridge',sub:'مفردات متقدمة'}],youtube:[{title:'BBC Learning English',sub:'استماع وقواعد'},{title:'TED Talks',sub:'أفكار ونقاش'}],apps:[{title:'Anki',sub:'مفردات متقدمة'}],websites:[{title:'Cambridge English',sub:'اختبارات C1/C2'}]}
       },
-      B1:{label:'B1 — متوسط',description:'في نهاية هذا المستوى:',canDo:['السفر','تجارب','آراء','نصوص'],duration:'80-120 ساعة',pace:'4 دروس',
+      C2:{label:'C2 — إتقان كامل',description:'المرحلة النهائية: استخدام الإنجليزية بدقة ومرونة قريبة من مستوى المتعلم المتقدم جدًا:',canDo:['فهم كل ما تقرؤه أو تسمعه تقريبًا','التقاط المعاني الضمنية والفروق الدقيقة','التعبير التلقائي والدقيق','إنتاج نصوص معقدة ومتماسكة'],duration:'250-400 ساعة',pace:'5-6 دروس',
         lessons:[
-          {num:1,title:'PPC',sub:'التام المستمر',learn:['have been+ing','الاستخدام'],video:{title:'PPC',url:'https://www.youtube.com/results?search_query=ppc',channel:'Lucy'}},
-          {num:2,title:'Past Perfect',sub:'الماضي التام',learn:['had+PII','الترتيب'],video:{title:'Past Perf',url:'https://www.youtube.com/results?search_query=past+perfect',channel:'BBC'}},
-          {num:3,title:'Conditionals',sub:'الشرط',learn:['Type 1,2,3','Mixed'],video:{title:'Cond',url:'https://www.youtube.com/results?search_query=conditionals',channel:'Lucy'}},
-          {num:4,title:'Passive',sub:'المجهول',learn:['be+PII','الأزمنة'],video:{title:'Passive',url:'https://www.youtube.com/results?search_query=passive',channel:'BBC'}},
-          {num:5,title:'Reported Speech',sub:'غير مباشر',learn:['said that','تغيير'],video:{title:'Reported',url:'https://www.youtube.com/results?search_query=reported',channel:'Lucy'}},
-          {num:6,title:'Relative Clauses',sub:'الموصولة',learn:['who/which','that'],video:{title:'Relative',url:'https://www.youtube.com/results?search_query=relative',channel:'BBC'}},
-          {num:7,title:'Phrasal Adv',sub:'مركبة متقدمة',learn:['look after','take off'],video:{title:'Phrasal B1',url:'https://www.youtube.com/results?search_query=advanced+phrasal',channel:'Lucy'}},
-          {num:8,title:'Idioms',sub:'تعبيرات',learn:['Break a leg','Piece of cake'],video:{title:'Idioms',url:'https://www.youtube.com/results?search_query=idioms',channel:'BBC'}},
-          {num:9,title:'Business',sub:'العمل',learn:['Emails','Meetings'],video:{title:'Business',url:'https://www.youtube.com/results?search_query=business',channel:'Lucy'}},
-          {num:10,title:'Listening',sub:'الاستماع',learn:['Podcasts','Movies'],video:{title:'Listening',url:'https://www.youtube.com/results?search_query=listening+B1',channel:'BBC'}},
-          {num:11,title:'Writing B1',sub:'الكتابة',learn:['Essays','Articles'],video:{title:'Writing B1',url:'https://www.youtube.com/results?search_query=writing+B1',channel:'Lucy'}},
-          {num:12,title:'Culture',sub:'الثقافة',learn:['UK/US','Traditions'],video:{title:'Culture',url:'https://www.youtube.com/results?search_query=culture',channel:'BBC'}},
-          {num:13,title:'Academic',sub:'أكاديمي',learn:['Essays','Research'],video:{title:'Academic',url:'https://www.youtube.com/results?search_query=academic',channel:'Lucy'}},
-          {num:14,title:'Exam Prep',sub:'الامتحانات',learn:['IELTS','TOEFL'],video:{title:'Exam',url:'https://www.youtube.com/results?search_query=exam',channel:'BBC'}},
-          {num:15,title:'Test B1',sub:'الاختبار',learn:['مراجعة','B2'],video:{title:'B1 Test',url:'https://www.youtube.com/results?search_query=english+B1',channel:'Lucy'}}
-        ],resources:{books:[{title:'English File B1',author:'Oxford',sub:'الأساسي'}],youtube:[{title:'BBC Learning',sub:'رسمي'},{title:'TED',sub:'محاضرات'}],apps:[{title:'Anki B1',sub:'مفردات'}],websites:[{title:'BBC 6 Min',sub:'مجاني'}]}
-      },
-      B2:{label:'B2 — متقدم',description:'في نهاية هذا المستوى:',canDo:['نصوص معقدة','طلاقة','كتابة','مناقشة'],duration:'120-180 ساعة',pace:'4-5 دروس',
-        lessons:[
-          {num:1,title:'Adv Tenses',sub:'أزمنة متقدمة',learn:['Future Perfect','Mixed'],video:{title:'Adv Tenses',url:'https://www.youtube.com/results?search_query=advanced+tenses',channel:'Lucy'}},
-          {num:2,title:'Mixed Cond',sub:'مختلط',learn:['Type 2+3','أمثلة'],video:{title:'Mixed',url:'https://www.youtube.com/results?search_query=mixed+cond',channel:'BBC'}},
-          {num:3,title:'Adv Passive',sub:'المجهول',learn:['Complex','الأخبار'],video:{title:'Adv Passive',url:'https://www.youtube.com/results?search_query=advanced+passive',channel:'Lucy'}},
-          {num:4,title:'Inversion',sub:'القلب',learn:['Never have I','Rarely'],video:{title:'Inversion',url:'https://www.youtube.com/results?search_query=inversion',channel:'BBC'}},
-          {num:5,title:'Cleft',sub:'مشقوقة',learn:['It is...that','What...is'],video:{title:'Cleft',url:'https://www.youtube.com/results?search_query=cleft',channel:'Lucy'}},
-          {num:6,title:'Adv Phrasal',sub:'مركبة متقدمة',learn:['Three-part','Idiomatic'],video:{title:'Adv Phrasal',url:'https://www.youtube.com/results?search_query=advanced+phrasal',channel:'BBC'}},
-          {num:7,title:'Formal/Informal',sub:'رسمي',learn:['Register','Styles'],video:{title:'Formal',url:'https://www.youtube.com/results?search_query=formal',channel:'Lucy'}},
-          {num:8,title:'Academic',sub:'كتابة',learn:['Essays','Research'],video:{title:'Academic',url:'https://www.youtube.com/results?search_query=academic',channel:'BBC'}},
-          {num:9,title:'Collocations',sub:'الفروق',learn:['Word choice','Collocations'],video:{title:'Colloc',url:'https://www.youtube.com/results?search_query=collocations',channel:'Lucy'}},
-          {num:10,title:'Cultural Refs',sub:'ثقافية',learn:['Idioms','Pop culture'],video:{title:'Culture',url:'https://www.youtube.com/results?search_query=culture+refs',channel:'BBC'}},
-          {num:11,title:'Debating',sub:'النقاش',learn:['Agreeing','Persuading'],video:{title:'Debate',url:'https://www.youtube.com/results?search_query=debating',channel:'Lucy'}},
-          {num:12,title:'Professional',sub:'مهني',learn:['Negotiations','Presentations'],video:{title:'Professional',url:'https://www.youtube.com/results?search_query=professional',channel:'BBC'}},
-          {num:13,title:'Literature',sub:'أدب',learn:['Books','Movies'],video:{title:'Literature',url:'https://www.youtube.com/results?search_query=literature',channel:'BBC'}},
-          {num:14,title:'IELTS/TOEFL',sub:'امتحانات',learn:['Listening','Reading'],video:{title:'IELTS',url:'https://www.youtube.com/results?search_query=ielts',channel:'Lucy'}},
-          {num:15,title:'Critical',sub:'تفكير نقدي',learn:['Analyzing','Evaluating'],video:{title:'Critical',url:'https://www.youtube.com/results?search_query=critical',channel:'BBC'}},
-          {num:16,title:'Adv Listening',sub:'استماع',learn:['Podcasts','Lectures'],video:{title:'Adv Listening',url:'https://www.youtube.com/results?search_query=advanced+listening',channel:'BBC'}},
-          {num:17,title:'Adv Writing',sub:'كتابة متقدمة',learn:['Essays','Reports'],video:{title:'Adv Writing',url:'https://www.youtube.com/results?search_query=advanced+writing',channel:'Lucy'}},
-          {num:18,title:'Test B2',sub:'الاختبار',learn:['مراجعة','C1'],video:{title:'B2 Test',url:'https://www.youtube.com/results?search_query=english+B2',channel:'BBC'}}
-        ],resources:{books:[{title:'English File B2',author:'Oxford',sub:'الأساسي'}],youtube:[{title:'BBC Learning',sub:'رسمي'},{title:'TED',sub:'محاضرات'}],apps:[{title:'Anki B2',sub:'مفردات'}],websites:[{title:'BBC News',sub:'أخبار'}]}
-      },
-      C1:{label:'C1 — إتقان',description:'في نهاية هذا المستوى:',canDo:['أي نص','طلاقة','احترافي','أكاديمي'],duration:'180-250 ساعة',pace:'5 دروس',
-        lessons:[
-          {num:1,title:'Adv Grammar',sub:'مراجعة',learn:['All tenses','Structures'],video:{title:'Adv Grammar',url:'https://www.youtube.com/results?search_query=advanced+grammar',channel:'Lucy'}},
-          {num:2,title:'Academic',sub:'كتابة',learn:['Research','Essays'],video:{title:'Academic',url:'https://www.youtube.com/results?search_query=academic+C1',channel:'BBC'}},
-          {num:3,title:'Adv Vocab',sub:'مفردات',learn:['Collocations','Idioms'],video:{title:'Adv Vocab',url:'https://www.youtube.com/results?search_query=advanced+vocab',channel:'Lucy'}},
-          {num:4,title:'Literary',sub:'تحليل أدبي',learn:['Novels','Poetry'],video:{title:'Lit',url:'https://www.youtube.com/results?search_query=literary',channel:'BBC'}},
-          {num:5,title:'Rhetoric',sub:'بلاغة',learn:['Ethos','Pathos','Logos'],video:{title:'Rhetoric',url:'https://www.youtube.com/results?search_query=rhetoric',channel:'TED'}},
-          {num:6,title:'Philosophy',sub:'فلسفة',learn:['Abstract','Arguments'],video:{title:'Philosophy',url:'https://www.youtube.com/results?search_query=philosophy',channel:'BBC'}},
-          {num:7,title:'Scientific',sub:'علمية',learn:['Research','Methods'],video:{title:'Science',url:'https://www.youtube.com/results?search_query=scientific',channel:'TED'}},
-          {num:8,title:'Leadership',sub:'قيادة',learn:['Management','Strategy'],video:{title:'Leadership',url:'https://www.youtube.com/results?search_query=leadership',channel:'TED'}},
-          {num:9,title:'Adv Listening',sub:'استماع',learn:['Native speed','Accents'],video:{title:'Listening',url:'https://www.youtube.com/results?search_query=listening+C1',channel:'BBC'}},
-          {num:10,title:'Nuances',sub:'دقيقة',learn:['Tone','Register'],video:{title:'Nuances',url:'https://www.youtube.com/results?search_query=nuances',channel:'Lucy'}},
-          {num:11,title:'Translation',sub:'ترجمة',learn:['Arabic-English','Context'],video:{title:'Translation',url:'https://www.youtube.com/results?search_query=translation',channel:'BBC'}},
-          {num:12,title:'Conversation',sub:'محادثة',learn:['Native-like','Debates'],video:{title:'Conversation',url:'https://www.youtube.com/results?search_query=conversation',channel:'Lucy'}},
-          {num:13,title:'Culture C1',sub:'ثقافة',learn:['History','Media'],video:{title:'Culture',url:'https://www.youtube.com/results?search_query=culture+C1',channel:'BBC'}},
-          {num:14,title:'Creative',sub:'إبداعية',learn:['Stories','Poetry'],video:{title:'Creative',url:'https://www.youtube.com/results?search_query=creative+writing',channel:'BBC'}},
-          {num:15,title:'C1 Exam',sub:'امتحان',learn:['CAE','CPE','IELTS'],video:{title:'C1 Exam',url:'https://www.youtube.com/results?search_query=CAE',channel:'Lucy'}},
-          {num:16,title:'Adv Debating',sub:'مناظرة',learn:['Structuring','Rebuttal'],video:{title:'Debating',url:'https://www.youtube.com/results?search_query=debating',channel:'BBC'}},
-          {num:17,title:'Media',sub:'إعلام',learn:['News','Advertising'],video:{title:'Media',url:'https://www.youtube.com/results?search_query=media+analysis',channel:'TED'}},
-          {num:18,title:'Prof Writing',sub:'مهنية',learn:['Reports','Publications'],video:{title:'Writing',url:'https://www.youtube.com/results?search_query=professional+writing',channel:'Lucy'}},
-          {num:19,title:'Fluency',sub:'طلاقة',learn:['Speed','Naturalness'],video:{title:'Fluency',url:'https://www.youtube.com/results?search_query=fluency',channel:'BBC'}},
-          {num:20,title:'C1 Test',sub:'الاختبار',learn:['Comprehensive','Mastery'],video:{title:'C1 Test',url:'https://www.youtube.com/results?search_query=C1+test',channel:'Lucy'}}
-        ],resources:{books:[{title:'Advanced Grammar',author:'Cambridge',sub:'مرجع'}],youtube:[{title:'TED',sub:'محاضرات'},{title:'Economist',sub:'تحليلي'}],apps:[{title:'Anki Adv',sub:'مفردات'}],websites:[{title:'Guardian',sub:'صحيفة'}]}
+          {num:1,title:'C2 Grammar Precision',sub:'الدقة النحوية',learn:['Subtle grammar choices','Ellipsis','Complex clause patterns'],video:{title:'C2 Grammar',url:'https://www.youtube.com/results?search_query=C2+English+grammar',channel:'Cambridge English'}},
+          {num:2,title:'Lexical Precision',sub:'الدقة المعجمية',learn:['Near-synonyms','Connotation','Register'],video:{title:'C2 Vocabulary Precision',url:'https://www.youtube.com/results?search_query=C2+English+vocabulary+precision',channel:'Cambridge English'}},
+          {num:3,title:'Idiomatic Mastery',sub:'الإتقان الاصطلاحي',learn:['Advanced idioms','Fixed expressions','Figurative language'],video:{title:'C2 English Idioms',url:'https://www.youtube.com/results?search_query=C2+English+idioms',channel:'BBC Learning English'}},
+          {num:4,title:'Discourse & Cohesion',sub:'بناء الخطاب',learn:['Cohesion','Coherence','Discourse markers'],video:{title:'C2 Discourse and Cohesion',url:'https://www.youtube.com/results?search_query=C2+discourse+cohesion+English',channel:'Cambridge English'}},
+          {num:5,title:'Implicit Meaning',sub:'المعنى الضمني',learn:['Inference','Sarcasm','Presupposition'],video:{title:'Implicit Meaning in English',url:'https://www.youtube.com/results?search_query=implicit+meaning+english+C2',channel:'BBC Learning English'}},
+          {num:6,title:'Pragmatics Mastery',sub:'البراغماتية',learn:['Politeness strategies','Indirectness','Context'],video:{title:'English Pragmatics C2',url:'https://www.youtube.com/results?search_query=english+pragmatics+C2',channel:'Cambridge English'}},
+          {num:7,title:'Rhetorical Mastery',sub:'البلاغة المتقدمة',learn:['Rhetorical devices','Framing','Persuasive structure'],video:{title:'Rhetoric C2 English',url:'https://www.youtube.com/results?search_query=rhetoric+C2+English',channel:'TED-Ed'}},
+          {num:8,title:'Academic Research English',sub:'الإنجليزية البحثية',learn:['Literature review','Synthesis','Citation language'],video:{title:'Academic Research English C2',url:'https://www.youtube.com/results?search_query=academic+research+english+C2',channel:'Cambridge English'}},
+          {num:9,title:'Scientific Communication',sub:'التواصل العلمي',learn:['Research presentation','Technical precision','Scientific argument'],video:{title:'Scientific Communication English',url:'https://www.youtube.com/results?search_query=scientific+communication+english+C2',channel:'TED'}},
+          {num:10,title:'Advanced Professional English',sub:'الإنجليزية المهنية المتقدمة',learn:['Negotiation','Diplomatic language','Executive communication'],video:{title:'Advanced Professional English C2',url:'https://www.youtube.com/results?search_query=professional+english+C2+negotiation',channel:'BBC Learning English'}},
+          {num:11,title:'Advanced Debate & Rebuttal',sub:'المناظرة والرد',learn:['Rebuttal','Concession','Logical fallacies'],video:{title:'Advanced Debate C2',url:'https://www.youtube.com/results?search_query=advanced+english+debate+C2',channel:'TED'}},
+          {num:12,title:'Literary Interpretation',sub:'التفسير الأدبي',learn:['Symbolism','Irony','Narrative technique'],video:{title:'Literary Interpretation C2',url:'https://www.youtube.com/results?search_query=literary+interpretation+C2',channel:'TED-Ed'}},
+          {num:13,title:'Film & Media Discourse',sub:'خطاب الإعلام والسينما',learn:['Subtext','Framing','Cultural references'],video:{title:'Media Discourse C2',url:'https://www.youtube.com/results?search_query=media+discourse+english+C2',channel:'BBC'}},
+          {num:14,title:'Native-Level Listening',sub:'الاستماع المتقدم جدًا',learn:['Fast speech','Regional accents','Overlapping speech'],video:{title:'Native English Listening C2',url:'https://www.youtube.com/results?search_query=native+english+listening+C2',channel:'BBC Learning English'}},
+          {num:15,title:'Advanced Speaking',sub:'التحدث المتقدم',learn:['Spontaneous speech','Nuanced opinions','Precise reformulation'],video:{title:'C2 English Speaking',url:'https://www.youtube.com/results?search_query=C2+English+speaking',channel:'Cambridge English'}},
+          {num:16,title:'C2 Essay & Argument',sub:'المقال والحجة',learn:['Complex argument','Synthesis','Style control'],video:{title:'C2 Essay Writing',url:'https://www.youtube.com/results?search_query=C2+essay+writing',channel:'Cambridge English'}},
+          {num:17,title:'C2 Report & Proposal',sub:'التقارير والمقترحات',learn:['Executive summary','Recommendations','Formal register'],video:{title:'C2 Report Writing',url:'https://www.youtube.com/results?search_query=C2+report+writing+English',channel:'British Council'}},
+          {num:18,title:'Translation at Advanced Level',sub:'الترجمة المتقدمة',learn:['Meaning preservation','Style','Cultural adaptation'],video:{title:'Advanced Translation English',url:'https://www.youtube.com/results?search_query=advanced+translation+English+C2',channel:'British Council'}},
+          {num:19,title:'C2 Error Analysis',sub:'تحليل الأخطاء',learn:['Persistent errors','False precision','Self-correction'],video:{title:'C2 English Error Analysis',url:'https://www.youtube.com/results?search_query=C2+English+error+analysis',channel:'Cambridge English'}},
+          {num:20,title:'C2 Mastery Project',sub:'مشروع الإتقان',learn:['Research presentation','Long-form writing','Advanced discussion'],video:{title:'C2 English Mastery',url:'https://www.youtube.com/results?search_query=C2+English+mastery',channel:'Cambridge English'}},
+          {num:21,title:'C2 Listening Mock',sub:'محاكاة الاستماع',learn:['Authentic audio','Inference','Note-taking'],video:{title:'C2 Listening Test',url:'https://www.youtube.com/results?search_query=C2+listening+test',channel:'Cambridge English'}},
+          {num:22,title:'C2 Reading Mock',sub:'محاكاة القراءة',learn:['Dense texts','Implicit meaning','Speed and accuracy'],video:{title:'C2 Reading Test',url:'https://www.youtube.com/results?search_query=C2+reading+test',channel:'Cambridge English'}},
+          {num:23,title:'C2 Speaking Mock',sub:'محاكاة التحدث',learn:['Interaction','Argumentation','Fluency'],video:{title:'C2 Speaking Test',url:'https://www.youtube.com/results?search_query=C2+speaking+test',channel:'Cambridge English'}},
+          {num:24,title:'C2 Final Mastery Test',sub:'الاختبار النهائي',learn:['Listening','Reading','Writing','Speaking'],video:{title:'C2 English Proficiency Test',url:'https://www.youtube.com/results?search_query=C2+English+proficiency+test',channel:'Cambridge English'}}
+        ],resources:{books:[{title:'English Grammar in Use + Advanced Grammar in Use',author:'Cambridge',sub:'مرجع C1-C2'},{title:'English Vocabulary in Use Advanced',author:'Cambridge',sub:'مفردات C1-C2'}],youtube:[{title:'Cambridge English',sub:'تحضير C1/C2'},{title:'BBC Learning English',sub:'استماع ولغة طبيعية'},{title:'TED Talks',sub:'محتوى متقدم'}],apps:[{title:'Anki',sub:'Spaced Repetition'}],websites:[{title:'Cambridge English',sub:'C2 Proficiency'}]}
       }
     }
   },
@@ -455,15 +434,146 @@ var DEFAULT_SCHEDULE = {
 };
 
 var DB_NAME='WhiteWolfDB', STORE_NAME='data', db=null;
-function openDB(){return new Promise(function(res,rej){var req=indexedDB.open(DB_NAME,1);req.onupgradeneeded=function(ev){var d=ev.target.result;if(!d.objectStoreNames.contains(STORE_NAME))d.createObjectStore(STORE_NAME,{keyPath:'key'})};req.onsuccess=function(ev){db=ev.target.result;res(db)};req.onerror=function(ev){rej(ev.target.error)}})}
+function openDB(){return new Promise(function(res,rej){var req=indexedDB.open(DB_NAME,2);req.onupgradeneeded=function(ev){var d=ev.target.result;if(!d.objectStoreNames.contains(STORE_NAME))d.createObjectStore(STORE_NAME,{keyPath:'key'});if(!d.objectStoreNames.contains('resourceFiles'))d.createObjectStore('resourceFiles',{keyPath:'key'})};req.onsuccess=function(ev){db=ev.target.result;res(db)};req.onerror=function(ev){rej(ev.target.error)}})}
 function dbGet(k){return new Promise(function(res,rej){var tx=db.transaction(STORE_NAME,'readonly');var s=tx.objectStore(STORE_NAME);var r=s.get(k);r.onsuccess=function(){res(r.result?r.result.value:null)};r.onerror=function(){rej(r.error)}})}
 function dbSet(k,v){return new Promise(function(res,rej){var tx=db.transaction(STORE_NAME,'readwrite');var s=tx.objectStore(STORE_NAME);var r=s.put({key:k,value:v});r.onsuccess=function(){res()};r.onerror=function(){rej(r.error)}})}
+function fileSet(k,v){return new Promise(function(res,rej){var tx=db.transaction('resourceFiles','readwrite');var s=tx.objectStore('resourceFiles');var r=s.put({key:k,value:v});r.onsuccess=function(){res()};r.onerror=function(){rej(r.error)}})}
+function fileGet(k){return new Promise(function(res,rej){var tx=db.transaction('resourceFiles','readonly');var s=tx.objectStore('resourceFiles');var r=s.get(k);r.onsuccess=function(){res(r.result?r.result.value:null)};r.onerror=function(){rej(r.error)}})}
+function fileDelete(k){return new Promise(function(res,rej){var tx=db.transaction('resourceFiles','readwrite');var s=tx.objectStore('resourceFiles');var r=s.delete(k);r.onsuccess=function(){res()};r.onerror=function(){rej(r.error)}})}
+function supportsFileSystemAccess(){return typeof window.showOpenFilePicker==='function'}
+async function pickPersistentFile(){
+  if(!supportsFileSystemAccess()) return null;
+  var handles=await window.showOpenFilePicker({multiple:false});
+  return handles&&handles[0]?handles[0]:null;
+}
+async function getPersistentFile(handle){
+  if(!handle||typeof handle.getFile!=='function')return null;
+  try{
+    var p=handle.queryPermission?await handle.queryPermission({mode:'read'}):'granted';
+    if(p!=='granted'&&handle.requestPermission)p=await handle.requestPermission({mode:'read'});
+    if(p!=='granted')return null;
+    return await handle.getFile();
+  }catch(e){console.warn('File access error',e);return null}
+}
+
+
+
+/* =========================================================
+   WHITE WOLF V43 — IN-APP RESOURCE READER
+   Persistent FileSystemFileHandle is stored; file bytes stay
+   in phone storage. Reader uses an object URL only while open.
+   ========================================================= */
+var WWReader = {
+  root:null, content:null, title:null, type:null, status:null,
+  external:null, url:null, file:null
+};
+
+function wwReaderInit(){
+  WWReader.root=document.getElementById('ww-file-reader');
+  WWReader.content=document.getElementById('ww-reader-content');
+  WWReader.title=document.getElementById('ww-reader-title');
+  WWReader.type=document.getElementById('ww-reader-type');
+  WWReader.status=document.getElementById('ww-reader-status');
+  WWReader.external=document.getElementById('ww-reader-external');
+  if(!WWReader.root)return;
+  var close=document.getElementById('ww-reader-close');
+  if(close)close.onclick=wwReaderClose;
+  var back=WWReader.root.querySelector('[data-reader-close]');
+  if(back)back.onclick=wwReaderClose;
+  if(WWReader.external)WWReader.external.onclick=function(){
+    if(WWReader.url)window.open(WWReader.url,'_blank','noopener');
+  };
+}
+
+function wwReaderClose(){
+  if(!WWReader.root)return;
+  WWReader.root.classList.remove('is-open');
+  WWReader.root.setAttribute('aria-hidden','true');
+  if(WWReader.content)WWReader.content.innerHTML='';
+  if(WWReader.url){setTimeout(function(){try{URL.revokeObjectURL(WWReader.url)}catch(e){}},250);WWReader.url=null}
+  WWReader.file=null;
+  document.body.classList.remove('ww-reader-lock');
+}
+
+function wwReaderEscape(e){if(e.key==='Escape'&&WWReader.root&&WWReader.root.classList.contains('is-open'))wwReaderClose()}
+
+function wwReaderOpen(file,title){
+  if(!WWReader.root)wwReaderInit();
+  if(!WWReader.root)return;
+  if(WWReader.url){try{URL.revokeObjectURL(WWReader.url)}catch(e){}}
+  WWReader.file=file; WWReader.url=URL.createObjectURL(file);
+  WWReader.title.textContent=title||file.name||'Resource';
+  var mime=(file.type||'').toLowerCase(), name=(file.name||'').toLowerCase();
+  var ext=(name.match(/\.([a-z0-9]+)$/)||[])[1]||'';
+  var kind=mime;
+  if(!kind){
+    if(ext==='pdf')kind='application/pdf';
+    else if(['png','jpg','jpeg','gif','webp','svg','bmp','avif'].indexOf(ext)>=0)kind='image/'+(ext==='jpg'?'jpeg':ext);
+    else if(['mp4','webm','ogg','mov'].indexOf(ext)>=0)kind='video/'+ext;
+    else if(['mp3','wav','m4a','aac','flac'].indexOf(ext)>=0)kind='audio/'+ext;
+    else if(['txt','md','csv','json','js','css','html','xml'].indexOf(ext)>=0)kind='text/plain';
+  }
+  WWReader.type.textContent=(ext||kind.split('/')[1]||'FILE').toUpperCase();
+  WWReader.status.textContent='Fichier local — lecture depuis le stockage du téléphone';
+  WWReader.content.innerHTML='';
+
+  if(kind==='application/pdf'||ext==='pdf'){
+    var iframe=document.createElement('iframe');
+    iframe.src=WWReader.url; iframe.title=title||file.name;
+    WWReader.content.appendChild(iframe);
+  }else if(kind.indexOf('image/')===0||['png','jpg','jpeg','gif','webp','svg','bmp','avif'].indexOf(ext)>=0){
+    var img=document.createElement('img'); img.src=WWReader.url; img.alt=title||file.name;
+    WWReader.content.appendChild(img);
+  }else if(kind.indexOf('video/')===0||['mp4','webm','ogg','mov'].indexOf(ext)>=0){
+    var video=document.createElement('video'); video.className='ww-reader-video';
+    video.src=WWReader.url; video.controls=true; video.playsInline=true; video.preload='metadata';
+    WWReader.content.appendChild(video);
+  }else if(kind.indexOf('audio/')===0||['mp3','wav','m4a','aac','flac','ogg'].indexOf(ext)>=0){
+    var audio=document.createElement('audio'); audio.className='ww-reader-audio';
+    audio.src=WWReader.url; audio.controls=true; audio.preload='metadata';
+    WWReader.content.appendChild(audio);
+  }else if(kind.indexOf('text/')===0||['txt','md','csv','json','js','css','html','xml'].indexOf(ext)>=0){
+    var pre=document.createElement('pre'); pre.className='ww-reader-text';
+    WWReader.content.appendChild(pre);
+    file.text().then(function(t){pre.textContent=t}).catch(function(){pre.textContent='Impossible de lire ce fichier.'});
+  }else if(ext==='doc'||ext==='docx'||ext==='odt'||ext==='rtf'){
+    var box=document.createElement('div'); box.className='ww-reader-empty';
+    box.innerHTML='<strong>Ce format ne possède pas de moteur de rendu natif dans le navigateur.</strong><span>Le fichier reste dans le stockage du téléphone. Utilise ↗ pour l’ouvrir avec l’application compatible installée sur ton téléphone.</span>';
+    WWReader.content.appendChild(box);
+  }else{
+    var box2=document.createElement('div'); box2.className='ww-reader-empty';
+    box2.innerHTML='<strong>Aperçu non disponible pour ce format.</strong><span>Le fichier est bien conservé dans le stockage du téléphone. Utilise ↗ pour l’ouvrir avec l’application compatible.</span>';
+    WWReader.content.appendChild(box2);
+  }
+  WWReader.root.classList.add('is-open'); WWReader.root.setAttribute('aria-hidden','false');
+  document.body.classList.add('ww-reader-lock');
+}
+
+async function wwOpenResourceInApp(sid,rid){
+  var r=null;
+  Object.keys(state.resources[sid]||{}).some(function(f){
+    r=(state.resources[sid][f]||[]).find(function(x){return x.id===rid}); return !!r;
+  });
+  if(!r||!r.fileKey){return}
+  try{
+    var stored=await fileGet(r.fileKey);
+    if(!stored){showToast('Référence du fichier introuvable');return}
+    var file=stored;
+    if(stored&&typeof stored.getFile==='function'){
+      file=await getPersistentFile(stored);
+      if(!file){showToast('Autorisation refusée ou fichier déplacé');return}
+    }
+    if(!file){showToast('Fichier introuvable');return}
+    wwReaderOpen(file,r.title||file.name);
+  }catch(e){console.warn('Internal reader error',e);showToast('Impossible d’ouvrir le fichier')}
+}
+
 
 var state = {
-  route:'dashboard', subjectId:null, topicId:null, langId:null, levelKey:'A1', lessonNum:null,
+  route:'dashboard', subjectId:null, topicId:null, langId:null, levelKey:'B2', lessonNum:null,
   statsTab:'overview', errFilter:'all',
   fcLang:null, fcScreen:'list', fcSession:null, fcFlipped:false,
-  resFilter:'Tout', resSearch:'', resOpenGroups:{},
+  resFilter:'Tout', resSearch:'', resOpenGroups:{}, pendingResourceHandle:null, pendingResourceFile:null,
   subjects:MASTER_SUBJECTS, topics:TOPICS_SEED, progress:{}, sessions:[], errors:[],
   programming:{}, languages:JSON.parse(JSON.stringify(LANGUAGES)), langDone:{},
   flashcards:{}, fcReview:{},
@@ -492,7 +602,7 @@ function computeSmartRevision(){var now=Date.now();var recs=[];state.topics.forE
 function getLang(id){for(var i=0;i<state.languages.length;i++){if(state.languages[i].id===id)return state.languages[i]}return state.languages[0]}
 function langProg(langId,lk){var L=getLang(langId);if(!L)return{done:0,total:0,percent:0};var lv=L.levels[lk];if(!lv||!lv.lessons.length)return{done:0,total:0,percent:0};var total=lv.lessons.length;var done=lv.lessons.filter(function(l){return state.langDone[langId+'_'+lk+'_'+l.num]}).length;return{done:done,total:total,percent:Math.round((done/total)*100)}}
 function langIsDone(langId,lk,num){return !!state.langDone[langId+'_'+lk+'_'+num]}
-function langCurrentLevel(langId){var L=getLang(langId);if(!L)return'A1';var keys=Object.keys(L.levels);for(var i=0;i<keys.length;i++){if(langProg(langId,keys[i]).percent<100)return keys[i]}return keys[keys.length-1]}
+function langCurrentLevel(langId){var L=getLang(langId);if(!L)return'A1';var keys=Object.keys(L.levels);var start=L.startLevel&&keys.indexOf(L.startLevel)>=0?keys.indexOf(L.startLevel):0;for(var i=start;i<keys.length;i++){if(langProg(langId,keys[i]).percent<100)return keys[i]}return keys[keys.length-1]}
 function langTotalDone(langId){var c=0;for(var k in state.langDone){if(k.indexOf(langId+'_')===0)c++}return c}
 function progTotalDone(){var c=0;for(var k in state.programming){if(state.programming[k]&&state.programming[k].level>0)c++}return c}
 function showToast(msg){var t=document.getElementById('toast');if(!t)return;t.textContent=msg;t.classList.add('show');setTimeout(function(){t.classList.remove('show')},2400)}
@@ -840,8 +950,8 @@ function detectResourceType(url){var u=(url||'').toLowerCase();if(u.indexOf('you
 function getResourceIcon(type){var icons={pdf:'📄',doc:'📝',image:'🖼️',video:'🎥',audio:'🎵',link:'🔗',folder:'📁'};return icons[type]||'🔗'}
 function getResourceTypeLabel(type){var labels={pdf:'PDF',doc:'Document',image:'Image',video:'Vidéo',audio:'Audio',link:'Lien'};return labels[type]||'Lien'}
 function getDomainName(url){try{var u=new URL(url);return u.hostname.replace('www.','')}catch(e){return ''}}
-function getAllResources(){var all=[];Object.keys(state.resources||{}).forEach(function(sid){var s=(state.subjects||[]).find(function(x){return x.id===sid});var folders=state.resources[sid]||{};Object.keys(folders).forEach(function(fn){(folders[fn]||[]).forEach(function(r){all.push(Object.assign({},r,{subjectName:s?s.name:'Matière',subjectId:sid,folder:fn,type:detectResourceType(r.url)}))})})});return all}
-function getResourcesStats(){var all=getAllResources();var stats={total:all.length,favorites:0,byType:{}};all.forEach(function(r){if(r.favorite)stats.favorites++;if(!stats.byType[r.type])stats.byType[r.type]=0;stats.byType[r.type]++});return stats}
+function getAllResources(){var all=[];Object.keys(state.resources||{}).forEach(function(sid){var s=(state.subjects||[]).find(function(x){return x.id===sid});var folders=state.resources[sid]||{};Object.keys(folders).forEach(function(fn){(folders[fn]||[]).forEach(function(r){all.push(Object.assign({},r,{subjectName:s?s.name:'Matière',subjectId:sid,folder:fn,type:r.fileKey?(r.fileType||'pdf'):detectResourceType(r.url)}))})})});return all}
+function getResourcesStats(){var all=getAllResources();var stats={total:all.length,favorites:0,studied:0,minutes:0,byType:{}};all.forEach(function(r){if(r.favorite)stats.favorites++;if(r.studied)stats.studied++;stats.minutes+=Number(r.studyMinutes||0);if(!stats.byType[r.type])stats.byType[r.type]=0;stats.byType[r.type]++});stats.completion=stats.total?Math.round(stats.studied/stats.total*100):0;return stats}
 function filterResources(all){var list=all;if(state.resFilter!=='Tout'){if(state.resFilter==='⭐ Favoris')list=list.filter(function(r){return r.favorite});else list=list.filter(function(r){return r.type===state.resFilter})}if(state.resSearch.trim()){var q=state.resSearch.toLowerCase();list=list.filter(function(r){return (r.title||'').toLowerCase().indexOf(q)!==-1||(r.subjectName||'').toLowerCase().indexOf(q)!==-1})}return list}
 
 // ============================================================
@@ -852,7 +962,7 @@ function render(){try{var root=document.getElementById('root');if(!root)return;i
 function renderOnboarding(){
   var step=state.onboardingStep||0;
   var content='';
-  if(step===0){content='<div class="onboarding-step-content"><div class="onboarding-icon onboarding-logo-v2"><img src="logo-v2-icon-centered.png" alt="White Wolf Scholar"></div><h1 class="onboarding-title">White Wolf Scholar</h1><p class="onboarding-subtitle">Study → Track → Analyze → Master</p><div class="onboarding-features"><div class="onboarding-feature"><span class="of-icon">📚</span><span class="of-text"><strong>Master APCE</strong> — 9 matières</span></div><div class="onboarding-feature"><span class="of-icon">🌱</span><span class="of-text"><strong>3 langues</strong> — A1 → C1</span></div><div class="onboarding-feature"><span class="of-icon">🤖</span><span class="of-text"><strong>Chatbot IA</strong> — 12 capacités</span></div><div class="onboarding-feature"><span class="of-icon">📊</span><span class="of-text"><strong>Stats avancées</strong> — Heatmap + Charts</span></div></div><button class="onboarding-btn" data-onboard-next>Suivant →</button></div>'}
+  if(step===0){content='<div class="onboarding-step-content"><div class="onboarding-icon onboarding-logo-v2"><img src="logo.svg" alt="White Wolf Scholar"></div><h1 class="onboarding-title">White Wolf Scholar</h1><p class="onboarding-subtitle">Study → Track → Analyze → Master</p><div class="onboarding-features"><div class="onboarding-feature"><span class="of-icon">📚</span><span class="of-text"><strong>Master APCE</strong> — 9 matières</span></div><div class="onboarding-feature"><span class="of-icon">🌱</span><span class="of-text"><strong>3 langues</strong> — A1 → C1</span></div><div class="onboarding-feature"><span class="of-icon">🤖</span><span class="of-text"><strong>Chatbot IA</strong> — 12 capacités</span></div><div class="onboarding-feature"><span class="of-icon">📊</span><span class="of-text"><strong>Stats avancées</strong> — Heatmap + Charts</span></div></div><button class="onboarding-btn" data-onboard-next>Suivant →</button></div>'}
   else if(step===1){content='<div class="onboarding-step-content"><div class="onboarding-icon">🎯</div><h1 class="onboarding-title">Ton objectif</h1><p class="onboarding-subtitle">Quel est ton but principal ?</p><div class="onboarding-goal-options"><div class="onboarding-goal '+(state.onboardingData.goal==='study'?'selected':'')+'" data-onboard-goal="study"><span class="og-icon">📚</span><span class="og-label">Étudier</span></div><div class="onboarding-goal '+(state.onboardingData.goal==='lang'?'selected':'')+'" data-onboard-goal="lang"><span class="og-icon">🌍</span><span class="og-label">Apprendre langues</span></div><div class="onboarding-goal '+(state.onboardingData.goal==='code'?'selected':'')+'" data-onboard-goal="code"><span class="og-icon">💻</span><span class="og-label">Programmer</span></div><div class="onboarding-goal '+(state.onboardingData.goal==='all'?'selected':'')+'" data-onboard-goal="all"><span class="og-icon">🚀</span><span class="og-label">Tout</span></div></div><button class="onboarding-btn" data-onboard-next>Suivant →</button><button class="onboarding-btn secondary" data-onboard-prev>← Retour</button></div>'}
   else if(step===2){content='<div class="onboarding-step-content"><div class="onboarding-icon">🔔</div><h1 class="onboarding-title">Notifications</h1><p class="onboarding-subtitle">Active les rappels pour ne rien manquer</p><div class="onboarding-features"><div class="onboarding-feature"><span class="of-icon">⏰</span><span class="of-text">Rappels de cours</span></div><div class="onboarding-feature"><span class="of-icon">📝</span><span class="of-text">Alertes examens</span></div><div class="onboarding-feature"><span class="of-icon">📋</span><span class="of-text">Tâches du jour</span></div></div><button class="onboarding-btn" data-onboard-finish>🐺 Commencer →</button><button class="onboarding-skip" data-onboard-skip>Plus tard</button></div>'}
   var dots='';
@@ -868,8 +978,9 @@ function renderApp(){
   var unread=getUnreadNotificationsCount();
   var bellDot=unread>0?'<span class="notif-badge">'+unread+'</span>':'';
   return '<div class="app">'+
-    '<div class="header"><h1 class="app-brand"><img class="app-logo" src="logo-v2-icon-centered.png" alt="White Wolf Scholar"> <span class="app-brand-text">White Wolf <span class="app-version">v39</span></span></h1>'+
+    '<div class="header"><h1 class="app-brand"><img class="app-logo" src="logo.svg" alt="White Wolf Scholar"> <span class="app-brand-text">White Wolf</span></h1>'+
       '<div style="position:relative;display:flex;align-items:center;gap:8px;">'+
+        '<span class="settings-btn ww-global-search-trigger" data-global-search title="Recherche globale">⌕</span>'+
         '<span class="settings-btn" id="notif-trigger" style="position:relative;">🔔'+bellDot+'</span>'+
         '<span class="settings-btn" id="settings-trigger">⚙️</span>'+
         '<div class="settings-dropdown" id="settings-menu">'+
@@ -915,7 +1026,7 @@ function renderDashboard(){
     '<div class="ww-hero-overlay"></div>'+
     '<div class="ww-hero-content">'+
       '<div class="ww-hero-kicker"><span class="ww-hero-line"></span> WHITE WOLF / STUDY SYSTEM</div>'+
-      '<h2>White Wolf Scholar <span>v39</span></h2>'+
+      '<h2>White Wolf Scholar</h2>'+
       '<p>Focus today,<br><span class="hero-motto-accent">Win tomorrow</span></p>'+
     '</div>'+
     
@@ -1115,25 +1226,26 @@ function renderEmploi(){
 
 function renderResources(){
   var all=getAllResources();var stats=getResourcesStats();var filtered=filterResources(all);
-  var header='<div class="res-header"><div class="res-top"><div class="res-icon-main">📚</div><div class="res-title"><h2>Ressources</h2><div class="res-sub">Centralise tous tes liens</div></div></div><div class="res-stats"><div class="res-stat"><div class="rs-num">'+stats.total+'</div><div class="rs-lbl">Total</div></div><div class="res-stat"><div class="rs-num" style="color:#e8cc6a;">'+stats.favorites+'</div><div class="rs-lbl">⭐ Favoris</div></div><div class="res-stat"><div class="rs-num" style="color:#6ae8a5;">'+Object.keys(stats.byType).length+'</div><div class="rs-lbl">Types</div></div></div></div>';
+  var header='<div class="res-header"><div class="res-top"><div class="res-icon-main">📚</div><div class="res-title"><h2>Ressources</h2><div class="res-sub">Centralise tes fichiers, liens et temps d’étude</div></div></div><div class="res-stats"><div class="res-stat"><div class="rs-num">'+stats.total+'</div><div class="rs-lbl">Total</div></div><div class="res-stat"><div class="rs-num" style="color:#6ae8a5;">'+stats.studied+'</div><div class="rs-lbl">Étudiées</div></div><div class="res-stat"><div class="rs-num" style="color:#8fb3e6;">'+stats.minutes+' min</div><div class="rs-lbl">Temps d’étude</div></div><div class="res-stat"><div class="rs-num" style="color:#e8cc6a;">'+stats.completion+'%</div><div class="rs-lbl">Progression</div></div></div><div class="res-progress"><div class="res-progress-fill" style="width:'+stats.completion+'%"></div></div></div>';
   var search='<div class="res-search"><input type="text" id="res-search-input" placeholder="🔍 Rechercher..." value="'+state.resSearch+'"><span class="search-icon">🔍</span></div>';
-  var actions='<div class="res-quick-actions"><button class="res-action-btn primary" data-add-resource>➕ Nouveau lien</button><button class="res-action-btn secondary" data-add-folder>📁 Dossier</button></div>';
-  var filterLabels={Tout:'Tout',pdf:'📄 PDF',doc:'📝 Docs',image:'🖼️ Images',video:'🎥 Vidéos',link:'🔗 Liens','⭐ Favoris':'⭐ Favoris'};
+  var actions='<div class="res-quick-actions"><button class="res-action-btn primary" data-add-resource>➕ Ajouter une ressource</button><button class="res-action-btn secondary" data-add-folder>📁 Dossier</button></div>';
+  var filterLabels={Tout:'Tout',pdf:'📄 PDF',doc:'📝 Docs',image:'🖼️ Images',video:'🎥 Vidéos',audio:'🎵 Audio',link:'🔗 Liens','⭐ Favoris':'⭐ Favoris'};
   var filters='<div class="res-filters">'+Object.keys(filterLabels).map(function(k){return '<div class="res-filter '+(state.resFilter===k?'active':'')+'" data-res-filter="'+k+'">'+filterLabels[k]+'</div>'}).join('')+'</div>';
   var content='';
   if(filtered.length===0){content='<div class="res-empty"><div class="re-icon">📚</div><div class="re-text">'+(all.length===0?'Aucune ressource':'Aucun résultat')+'</div>'+(all.length===0?'<button class="btn-primary" data-add-resource>➕ Ajouter</button>':'')+'</div>'}
-  else{var grouped={};filtered.forEach(function(r){if(!grouped[r.subjectName])grouped[r.subjectName]=[];grouped[r.subjectName].push(r)});content=Object.keys(grouped).map(function(subjectName){var items=grouped[subjectName];var isOpen=state.resOpenGroups[subjectName]!==false;var itemsHTML=isOpen?items.map(function(r){var type=r.type;var icon=getResourceIcon(type);var domain=getDomainName(r.url);var star=r.favorite?'⭐':'☆';return '<div class="res-card type-'+type+'"><div class="rc-star '+(r.favorite?'active':'')+'" data-toggle-fav="'+r.subjectId+'|'+r.id+'">'+star+'</div><div class="rc-header"><div class="rc-icon">'+icon+'</div><div class="rc-info"><div class="rc-title">'+r.title+'</div><div class="rc-meta"><span class="rc-badge">'+getResourceTypeLabel(type)+'</span>'+(domain?'<span>🌐 '+domain+'</span>':'')+'</div></div></div><div class="rc-actions"><a href="'+r.url+'" target="_blank" class="btn-open">🔗 Ouvrir</a><button class="btn-copy" data-copy-url="'+(r.url||'').replace(/"/g,'&quot;')+'">📋</button><button class="btn-delete" data-delete-resource="'+r.subjectId+'|'+r.id+'">🗑️</button></div></div>'}).join(''):'';return '<div style="margin-bottom:16px;"><div class="res-group-header '+(isOpen?'open':'')+'" data-toggle-group="'+subjectName+'"><div class="rgh-title">📚 '+subjectName+'</div><div style="display:flex;align-items:center;gap:10px;"><span class="rgh-count">'+items.length+'</span><span class="rgh-arrow">'+(isOpen?'▼':'▶')+'</span></div></div>'+itemsHTML+'</div>'}).join('')}
-  return '<div>'+header+search+actions+filters+'<div class="card" style="padding:14px;">'+content+'</div></div>';
+  else{var grouped={};filtered.forEach(function(r){if(!grouped[r.subjectName])grouped[r.subjectName]=[];grouped[r.subjectName].push(r)});content=Object.keys(grouped).map(function(subjectName){var items=grouped[subjectName];var isOpen=state.resOpenGroups[subjectName]!==false;var itemsHTML=isOpen?items.map(function(r){var type=r.type;var icon=getResourceIcon(type);var domain=getDomainName(r.url);var star=r.favorite?'⭐':'☆';var studied=r.studied?'active':'';var studyTime=Number(r.studyMinutes||0);var openLabel=r.fileKey?'📄 Ouvrir fichier':'🔗 Ouvrir';return '<div class="res-card type-'+type+' '+(r.studied?'is-studied':'')+'"><div class="rc-star '+(r.favorite?'active':'')+'" data-toggle-fav="'+r.subjectId+'|'+r.id+'">'+star+'</div><div class="rc-header"><div class="rc-icon">'+icon+'</div><div class="rc-info"><div class="rc-title">'+r.title+'</div><div class="rc-meta"><span class="rc-badge">'+getResourceTypeLabel(type)+'</span>'+(r.fileName?'<span>📎 '+r.fileName+'</span>':'')+(domain?'<span>🌐 '+domain+'</span>':'')+'</div></div></div><div class="rc-study"><button class="btn-study '+studied+'" data-toggle-studied="'+r.subjectId+'|'+r.id+'">'+(r.studied?'✓ Étudiée':'○ Marquer étudiée')+'</button><span class="study-time">⏱ '+studyTime+' min</span><button class="btn-time" data-log-resource-time="'+r.subjectId+'|'+r.id+'">+ Temps</button></div><div class="rc-actions">'+(r.fileKey?'<button class="btn-open" data-open-resource="'+r.subjectId+'|'+r.id+'">'+openLabel+'</button>':'<a href="'+(r.url||'#')+'" target="_blank" class="btn-open">'+openLabel+'</a>')+(r.url?'<button class="btn-copy" data-copy-url="'+r.url.replace(/"/g,'&quot;')+'">📋</button>':'')+'<button class="btn-delete" data-delete-resource="'+r.subjectId+'|'+r.id+'">🗑️</button></div></div>'}).join(''):'';return '<div style="margin-bottom:16px;"><div class="res-group-header '+(isOpen?'open':'')+'" data-toggle-group="'+subjectName+'"><div class="rgh-title">📚 '+subjectName+'</div><div style="display:flex;align-items:center;gap:10px;"><span class="rgh-count">'+items.length+'</span><span class="rgh-arrow">'+(isOpen?'▼':'▶')+'</span></div></div>'+itemsHTML+'</div>'}).join('')}
+  return '<div>'+header+search+actions+filters+'<div class="card" style="padding:14px;">'+content+'</div></div>'+(window.WWV46LibraryHTML?window.WWV46LibraryHTML():'');
 }
 
 function renderModal(){
   var m=state.modal;if(!m)return '';
   if(m.type==='notifications'){var notifs=state.notifications||[];var unread=notifs.filter(function(n){return !state.readNotifications[n.id]});var listHTML='';if(notifs.length===0){listHTML='<div class="notif-empty"><div class="ne-icon">🔕</div><div class="ne-text">Aucune notification</div></div>'}else{listHTML='<div class="notif-list">'+notifs.map(function(n){var isRead=state.readNotifications[n.id];return '<div class="notif-item '+n.type+'" style="'+(isRead?'opacity:.5':'')+'"><div class="ni-icon">'+n.icon+'</div><div class="ni-content"><div class="ni-title">'+n.title+'</div><div class="ni-meta">'+n.text+'</div></div></div>'}).join('')+'</div>'}var clearBtn=unread.length>0?'<button class="btn-outline btn-small" data-mark-all-read style="margin-bottom:12px;">✅ Tout marquer comme lu</button>':'';return '<div class="modal-overlay"><div class="modal-content"><span class="close-btn" data-close-modal>❌</span><h3>📬 Notifications</h3>'+clearBtn+listHTML+'<div class="modal-actions"><button class="btn-primary" data-close-modal>Fermer</button></div></div></div>'}
-  if(m.type==='about'){return '<div class="modal-overlay"><div class="modal-content"><span class="close-btn" data-close-modal>❌</span><h3>ℹ️ À propos</h3><div style="text-align:center;padding:10px 0;"><img src="logo-v2.png" alt="White Wolf Scholar" style="width:min(100%,280px);height:auto;aspect-ratio:1/1;object-fit:contain;margin:0 auto 10px;display:block;border-radius:16px;"><div style="font-weight:600;font-size:22px;">White Wolf Scholar</div><div class="text-muted">Version 39 — Advanced Stats</div><div class="text-muted text-small" style="margin-top:8px;">+ Heatmap · Charts · Analyse avancée</div></div><div class="modal-actions"><button class="btn-primary" data-close-modal>Fermer</button></div></div></div>'}
+  if(m.type==='about'){return '<div class="modal-overlay"><div class="modal-content"><span class="close-btn" data-close-modal>❌</span><h3>ℹ️ À propos</h3><div style="text-align:center;padding:10px 0;"><img src="logo.svg" alt="White Wolf Scholar" style="width:min(100%,280px);height:auto;aspect-ratio:1/1;object-fit:contain;margin:0 auto 10px;display:block;border-radius:16px;"><div style="font-weight:600;font-size:22px;">White Wolf Scholar</div><div class="text-muted">Advanced Stats</div><div class="text-muted text-small" style="margin-top:8px;">+ Heatmap · Charts · Analyse avancée</div></div><div class="modal-actions"><button class="btn-primary" data-close-modal>Fermer</button></div></div></div>'}
   if(m.type==='task'){var today=new Date().toISOString().slice(0,10);return '<div class="modal-overlay"><div class="modal-content"><span class="close-btn" data-close-modal>❌</span><h3>➕ Nouvelle tâche</h3><div style="display:grid;gap:12px;"><input id="task-text" placeholder="Description" autofocus><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;"><div><label>📅 Date</label><input type="date" id="task-date" value="'+today+'"></div><div><label>⏰ Heure</label><input type="time" id="task-time" value="09:00"></div></div><div><label>🎯 Priorité</label><select id="task-priority"><option value="Basse">🟢 Basse</option><option value="Moyenne" selected>🟡 Moyenne</option><option value="Haute">🔴 Haute</option></select></div></div><div class="modal-actions"><button class="btn-outline" data-close-modal>Annuler</button><button class="btn-primary" data-save-task>✅ Enregistrer</button></div></div></div>'}
   if(m.type==='exam'){var today2=new Date().toISOString().slice(0,10);return '<div class="modal-overlay"><div class="modal-content"><span class="close-btn" data-close-modal>❌</span><h3>📝 Nouvel examen</h3><div style="display:grid;gap:12px;"><input id="exam-title" placeholder="Titre" autofocus><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;"><div><label>📅 Date</label><input type="date" id="exam-date" value="'+today2+'"></div><div><label>⏰ Heure</label><input type="time" id="exam-time" value="09:00"></div></div><div><label>📚 Matière</label><select id="exam-subject"><option value="">Aucune</option>'+state.subjects.map(function(s){return '<option value="'+s.id+'">'+s.name+'</option>'}).join('')+'</select></div><textarea id="exam-notes" rows="2" placeholder="Notes"></textarea></div><div class="modal-actions"><button class="btn-outline" data-close-modal>Annuler</button><button class="btn-primary" data-save-exam>✅ Enregistrer</button></div></div></div>'}
   if(m.type==='folder'){return '<div class="modal-overlay"><div class="modal-content"><span class="close-btn" data-close-modal>❌</span><h3>📁 Nouveau dossier</h3><div style="display:grid;gap:12px;"><select id="folder-subject"><option value="">Choisir matière</option>'+state.subjects.map(function(s){return '<option value="'+s.id+'">'+s.name+'</option>'}).join('')+'</select><input id="folder-name" placeholder="Nom du dossier"></div><div class="modal-actions"><button class="btn-outline" data-close-modal>Annuler</button><button class="btn-primary" data-save-folder>Enregistrer</button></div></div></div>'}
-  if(m.type==='resource'){return '<div class="modal-overlay"><div class="modal-content"><span class="close-btn" data-close-modal>❌</span><h3>🔗 Nouvelle ressource</h3><div style="display:grid;gap:12px;"><select id="resource-subject"><option value="">Choisir matière</option>'+state.subjects.map(function(s){return '<option value="'+s.id+'">'+s.name+'</option>'}).join('')+'</select><input id="resource-title" placeholder="Titre"><input id="resource-url" placeholder="https://..." type="url"></div><div class="modal-actions"><button class="btn-outline" data-close-modal>Annuler</button><button class="btn-primary" data-save-resource>✅ Enregistrer</button></div></div></div>'}
+  if(m.type==='resource'){return '<div class="modal-overlay"><div class="modal-content"><span class="close-btn" data-close-modal>❌</span><h3>📚 Nouvelle ressource</h3><div style="display:grid;gap:12px;"><select id="resource-subject"><option value="">Choisir matière</option>'+state.subjects.map(function(s){return '<option value="'+s.id+'">'+s.name+'</option>'}).join('')+'</select><input id="resource-title" placeholder="Titre"><div class="res-input-label">🔗 Lien direct (optionnel)</div><input id="resource-url" placeholder="https://..." type="url"><div class="res-or">— ou —</div><div class="res-input-label">📥 Fichier sur le téléphone</div><button type="button" class="btn-outline" data-pick-resource-file>Choisir un fichier depuis le stockage</button><div id="resource-file-name" class="text-muted text-small">Aucun fichier sélectionné</div><input id="resource-file" type="file" accept=".pdf,.doc,.docx,.txt,.jpg,.jpeg,.png,.gif,.mp3,.mp4,.webm,.ppt,.pptx" style="display:none"><div class="text-muted text-small">Le fichier reste dans le stockage du téléphone. White Wolf Scholar enregistre uniquement une référence au fichier.</div></div><div class="modal-actions"><button class="btn-outline" data-close-modal>Annuler</button><button class="btn-primary" data-save-resource>✅ Enregistrer</button></div></div></div>'}
+  if(m.type==='resourceTime'){return '<div class="modal-overlay"><div class="modal-content"><span class="close-btn" data-close-modal>❌</span><h3>⏱️ Enregistrer le temps</h3><div style="display:grid;gap:12px;"><label>Minutes étudiées</label><input id="resource-time-min" type="number" min="1" max="1440" value="30" autofocus></div><div class="modal-actions"><button class="btn-outline" data-close-modal>Annuler</button><button class="btn-primary" data-save-resource-time data-sid="'+m.subjectId+'" data-rid="'+m.resourceId+'">✅ Enregistrer</button></div></div></div>'}
   if(m.type==='session'){var today3=new Date().toISOString().slice(0,10);var tid=m.topicId;return '<div class="modal-overlay"><div class="modal-content"><span class="close-btn" data-close-modal>❌</span><h3>📚 Session</h3><div style="display:grid;gap:12px;"><div><label>📅 Date</label><input type="date" id="session-date" value="'+today3+'"></div><div><label>⏱️ Durée (min)</label><input type="number" id="session-duration" value="30" min="5" max="240"></div></div><div class="modal-actions"><button class="btn-outline" data-close-modal>Annuler</button><button class="btn-primary" data-save-session="'+tid+'">Enregistrer</button></div></div></div>'}
   if(m.type==='progDetail'){var t=PROGRAMMING_TOPICS.find(function(x){return x.id===m.topicId});if(!t)return '';return '<div class="modal-overlay"><div class="modal-content"><span class="close-btn" data-close-modal>❌</span><h3>'+t.icon+' '+t.title+'</h3><div class="what-learn"><h4>💡 ما ستتعلمه:</h4><ul>'+t.learn.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul></div><div class="modal-actions"><button class="btn-primary" data-close-modal>Fermer</button></div></div></div>'}
   if(m.type==='addError'){return '<div class="modal-overlay"><div class="modal-content"><span class="close-btn" data-close-modal>❌</span><h3>➕ Erreur</h3><div style="display:grid;gap:12px;"><input id="err-desc" placeholder="Description" autofocus><select id="err-subject"><option value="">Aucune</option>'+state.subjects.map(function(s){return '<option value="'+s.id+'">'+s.name+'</option>'}).join('')+'</select><select id="err-cause"><option value="forgot_formula">نسيت الصيغة</option><option value="confusion">خلط</option><option value="calculation">حساب</option><option value="reading">قراءة</option><option value="methodology">منهجية</option><option value="other">أخرى</option></select><textarea id="err-correction" rows="2" placeholder="الصواب"></textarea></div><div class="modal-actions"><button class="btn-outline" data-close-modal>Annuler</button><button class="btn-primary" data-save-error>✅ Enregistrer</button></div></div></div>'}
@@ -1208,13 +1320,19 @@ function attachAppEvents(){
   document.querySelectorAll('[data-add-folder]').forEach(function(el){el.onclick=function(){state.modal={type:'folder'};render()}});
   document.querySelectorAll('[data-save-folder]').forEach(function(el){el.onclick=function(){var sid=document.getElementById('folder-subject').value;var fn=document.getElementById('folder-name').value;if(!sid||!fn){alert('Remplir');return}if(!state.resources[sid])state.resources[sid]={};if(state.resources[sid][fn]){alert('Existe');return}state.resources[sid][fn]=[];state.modal=null;showToast('✅ Créé');saveState();render()}});
   document.querySelectorAll('[data-add-resource]').forEach(function(el){el.onclick=function(){state.modal={type:'resource'};render()}});
-  document.querySelectorAll('[data-save-resource]').forEach(function(el){el.onclick=function(){var sid=document.getElementById('resource-subject').value;var title=document.getElementById('resource-title').value;var url=document.getElementById('resource-url').value;if(!sid||!title||!url){alert('Remplir');return}if(!state.resources[sid])state.resources[sid]={};if(!state.resources[sid]['Général'])state.resources[sid]['Général']=[];state.resources[sid]['Général'].push({id:generateId(),title:title,url:url,tag:'📚',dateAdded:new Date().toISOString().slice(0,10),favorite:false});state.modal=null;showToast('✅ Ajoutée');saveState();render()}});
-  document.querySelectorAll('[data-delete-resource]').forEach(function(el){el.onclick=function(e){e.stopPropagation();if(!confirm('Supprimer ?'))return;var parts=this.dataset.deleteResource.split('|');var sid=parts[0],rid=parts[1];if(state.resources[sid]){Object.keys(state.resources[sid]).forEach(function(f){state.resources[sid][f]=state.resources[sid][f].filter(function(r){return r.id!==rid})})}saveState();render()}});
+  document.querySelectorAll('[data-save-resource]').forEach(function(el){el.onclick=async function(){var sid=document.getElementById('resource-subject').value;var title=document.getElementById('resource-title').value.trim();var url=document.getElementById('resource-url').value.trim();var fileInput=document.getElementById('resource-file');var file=(state.pendingResourceFile)||(fileInput&&fileInput.files?fileInput.files[0]:null);var handle=state.pendingResourceHandle;if(!sid||!title||(!url&&!file&&!handle)){alert('Ajoute un lien ou un fichier');return}if(!state.resources[sid])state.resources[sid]={};if(!state.resources[sid]['Général'])state.resources[sid]['Général']=[];var r={id:generateId(),title:title,url:url||'',tag:'📚',dateAdded:new Date().toISOString().slice(0,10),favorite:false,studied:false,studyMinutes:0};if(file||handle){if(!handle&&file){alert('Ce navigateur ne permet pas de conserver une référence persistante vers le stockage du téléphone. Utilise Chrome/Edge avec le bouton « Choisir un fichier depuis le stockage ».');return}r.fileKey='rf_'+r.id;r.fileName=(file&&file.name)||'Fichier sélectionné';r.fileType=((file&&file.type)||'').indexOf('pdf')!==-1?'pdf':((file&&file.type)||'').indexOf('word')!==-1?'doc':((file&&file.type)||'').indexOf('image')!==-1?'image':((file&&file.type)||'').indexOf('audio')!==-1?'audio':((file&&file.type)||'').indexOf('video')!==-1?'video':'doc';try{await fileSet(r.fileKey,handle)}catch(e){alert('Impossible d’enregistrer la référence du fichier');return}}state.resources[sid]['Général'].push(r);state.modal=null;state.pendingResourceHandle=null;state.pendingResourceFile=null;showToast('✅ Ressource ajoutée');await saveState();render()}});
+  document.querySelectorAll('#resource-file').forEach(function(el){el.onchange=function(){var f=this.files&&this.files[0];if(f){state.pendingResourceFile=f;state.pendingResourceHandle=null;var nameEl=document.getElementById('resource-file-name');if(nameEl)nameEl.textContent='✓ '+f.name+' — سيتم استخدام نسخة المتصفح في هذا المتصفح';}}});
+  document.querySelectorAll('[data-pick-resource-file]').forEach(function(el){el.onclick=async function(){try{if(supportsFileSystemAccess()){var h=await pickPersistentFile();if(h){state.pendingResourceHandle=h;state.pendingResourceFile=null;var f=await h.getFile();var nameEl=document.getElementById('resource-file-name');if(nameEl)nameEl.textContent='✓ '+f.name+' — fichier externe au stockage de l’application';}}else{var input=document.getElementById('resource-file');if(input)input.click()}}catch(e){if(e&&e.name!=='AbortError')showToast('Impossible de choisir le fichier')}}});
+  document.querySelectorAll('[data-open-resource]').forEach(function(el){el.onclick=async function(e){e.stopPropagation();var parts=this.dataset.openResource.split('|');await wwOpenResourceInApp(parts[0],parts[1])}});
+  document.querySelectorAll('[data-toggle-studied]').forEach(function(el){el.onclick=function(){var parts=this.dataset.toggleStudied.split('|');var r=null;Object.keys(state.resources[parts[0]]||{}).some(function(f){r=(state.resources[parts[0]][f]||[]).find(function(x){return x.id===parts[1]});return !!r});if(r){r.studied=!r.studied;saveState();render()}}});
+  document.querySelectorAll('[data-log-resource-time]').forEach(function(el){el.onclick=function(){var parts=this.dataset.logResourceTime.split('|');state.modal={type:'resourceTime',subjectId:parts[0],resourceId:parts[1]};render()}});
+  document.querySelectorAll('[data-save-resource-time]').forEach(function(el){el.onclick=function(){var mins=Math.max(1,Number(document.getElementById('resource-time-min').value)||0);var sid=this.dataset.sid,rid=this.dataset.rid,r=null;Object.keys(state.resources[sid]||{}).some(function(f){r=(state.resources[sid][f]||[]).find(function(x){return x.id===rid});return !!r});if(r){r.studyMinutes=Number(r.studyMinutes||0)+mins;r.studied=true;state.modal=null;showToast('⏱️ '+mins+' min enregistrées');saveState();render()}}});
+  document.querySelectorAll('[data-delete-resource]').forEach(function(el){el.onclick=function(e){e.stopPropagation();if(!confirm('Supprimer ?'))return;var parts=this.dataset.deleteResource.split('|');var sid=parts[0],rid=parts[1];if(state.resources[sid]){Object.keys(state.resources[sid]).forEach(function(f){state.resources[sid][f]=state.resources[sid][f].filter(function(r){if(r.id===rid&&r.fileKey)fileDelete(r.fileKey);return r.id!==rid})})}saveState();render()}});
 }
 
 async function saveState(){try{var data={subjects:state.subjects,topics:state.topics,progress:state.progress,sessions:state.sessions,errors:state.errors,programming:state.programming,languages:state.languages,langDone:state.langDone,flashcards:state.flashcards,fcReview:state.fcReview,tasks:state.tasks,exams:state.exams,resources:state.resources,ignoredTopics:state.ignoredTopics,settings:state.settings,onboardingDone:state.onboardingDone,onboardingData:state.onboardingData,customSchedule:state.customSchedule,xp:state.xp,studyStreak:state.studyStreak,lastStudyDate:state.lastStudyDate,readNotifications:state.readNotifications};await dbSet('appState',data)}catch(e){console.warn('saveState error',e)}}
 
-async function loadState(){try{var data=await dbGet('appState');if(data){state.subjects=data.subjects||MASTER_SUBJECTS;state.topics=data.topics||TOPICS_SEED;state.progress=data.progress||{};state.sessions=data.sessions||[];state.errors=data.errors||[];state.programming=data.programming||{};state.languages=data.languages||JSON.parse(JSON.stringify(LANGUAGES));state.langDone=data.langDone||{};state.flashcards=data.flashcards||{};state.fcReview=data.fcReview||{};state.tasks=data.tasks||[];state.exams=data.exams||[];state.resources=data.resources||{};state.ignoredTopics=data.ignoredTopics||{};state.settings=data.settings||{showSmartRevision:true,notifications:true};if(state.settings.notifications===undefined)state.settings.notifications=true;state.onboardingDone=data.onboardingDone||false;state.onboardingData=data.onboardingData||{name:'',goal:'',studyTime:'',notif:true};state.customSchedule=data.customSchedule||{};state.xp=data.xp||0;state.studyStreak=data.studyStreak||0;state.lastStudyDate=data.lastStudyDate||null;state.readNotifications=data.readNotifications||{}}if(!state.notifications)state.notifications=[];if(!state.readNotifications)state.readNotifications={};if(!state._lastSentNotifs)state._lastSentNotifs={}}catch(e){console.warn('Load error',e);state.subjects=MASTER_SUBJECTS;state.topics=TOPICS_SEED;state.languages=JSON.parse(JSON.stringify(LANGUAGES));state.notifications=[];state.readNotifications={}}}
+async function loadState(){try{var data=await dbGet('appState');if(data){state.subjects=data.subjects||MASTER_SUBJECTS;state.topics=data.topics||TOPICS_SEED;state.progress=data.progress||{};state.sessions=data.sessions||[];state.errors=data.errors||[];state.programming=data.programming||{};state.languages=data.languages||JSON.parse(JSON.stringify(LANGUAGES));state.langDone=data.langDone||{};state.flashcards=data.flashcards||{};var latestEn=LANGUAGES.find(function(x){return x.id==='en'});var existingEn=state.languages.find(function(x){return x.id==='en'});if(latestEn){if(existingEn){var ei=state.languages.indexOf(existingEn);state.languages[ei]=JSON.parse(JSON.stringify(latestEn))}else{state.languages.push(JSON.parse(JSON.stringify(latestEn)))}}if(state.flashcards&&state.flashcards.en){state.flashcards.en=state.flashcards.en.filter(function(c){return !c.auto||!!(state.languages.find(function(x){return x.id==='en'}).levels[c.level])})}state.fcReview=data.fcReview||{};state.tasks=data.tasks||[];state.exams=data.exams||[];state.resources=data.resources||{};state.ignoredTopics=data.ignoredTopics||{};state.settings=data.settings||{showSmartRevision:true,notifications:true};if(state.settings.notifications===undefined)state.settings.notifications=true;state.onboardingDone=data.onboardingDone||false;state.onboardingData=data.onboardingData||{name:'',goal:'',studyTime:'',notif:true};state.customSchedule=data.customSchedule||{};state.xp=data.xp||0;state.studyStreak=data.studyStreak||0;state.lastStudyDate=data.lastStudyDate||null;state.readNotifications=data.readNotifications||{}}if(!state.notifications)state.notifications=[];if(!state.readNotifications)state.readNotifications={};if(!state._lastSentNotifs)state._lastSentNotifs={}}catch(e){console.warn('Load error',e);state.subjects=MASTER_SUBJECTS;state.topics=TOPICS_SEED;state.languages=JSON.parse(JSON.stringify(LANGUAGES));state.notifications=[];state.readNotifications={}}}
 
 var chatMsgs=document.getElementById('chatbot-messages');
 var chatInput=document.getElementById('chatbot-input');
@@ -1250,8 +1368,529 @@ if(chatMsgs){
 
 setInterval(function(){if(state.onboardingDone){updateNotifications()}},60000);
 
+wwReaderInit();
+document.addEventListener('keydown',wwReaderEscape);
+
 async function init(){try{await openDB();await loadState();wwUpgradeIcons(document.body);render()}catch(e){console.error('Init error:',e);var root=document.getElementById('root');if(root)root.innerHTML='<div style="padding:20px;color:#e86a6a;"><h2>⚠️ Erreur</h2><pre>'+e.message+'</pre><button onclick="location.reload()">Recharger</button></div>'}}
 
 init();
 
+})();
+
+
+/* =========================================================
+   WHITE WOLF V43 — INTERNAL FILE READER
+   Persistent files remain in phone storage. The app stores
+   only FileSystemFileHandle references in IndexedDB.
+   ========================================================= */
+(function(){
+  "use strict";
+
+  var R = {root:null,content:null,title:null,type:null,status:null,external:null,currentUrl:null,currentFile:null};
+
+  function initReader(){
+    R.root=document.getElementById("ww-file-reader");
+    R.content=document.getElementById("ww-reader-content");
+    R.title=document.getElementById("ww-reader-title");
+    R.type=document.getElementById("ww-reader-type");
+    R.status=document.getElementById("ww-reader-status");
+    R.external=document.getElementById("ww-reader-external");
+    if(!R.root) return;
+
+    var close=document.getElementById("ww-reader-close");
+    if(close) close.addEventListener("click", closeReader);
+    R.root.querySelectorAll("[data-reader-close]").forEach(function(el){
+      el.addEventListener("click", closeReader);
+    });
+    if(R.external) R.external.addEventListener("click", function(){
+      if(R.currentUrl) window.open(R.currentUrl,"_blank","noopener,noreferrer");
+    });
+    document.addEventListener("keydown", function(e){
+      if(e.key==="Escape" && R.root.classList.contains("is-open")) closeReader();
+    });
+  }
+
+  function revoke(){
+    if(R.currentUrl){
+      try{URL.revokeObjectURL(R.currentUrl);}catch(e){}
+      R.currentUrl=null;
+    }
+  }
+
+  function closeReader(){
+    revoke();
+    R.currentFile=null;
+    if(R.content) R.content.innerHTML="";
+    if(R.root){
+      R.root.classList.remove("is-open");
+      R.root.setAttribute("aria-hidden","true");
+    }
+    document.body.classList.remove("ww-reader-lock");
+  }
+
+  function openShell(file){
+    if(!R.root) initReader();
+    revoke();
+    R.currentFile=file;
+    R.title.textContent=file.name||"Resource";
+    R.type.textContent=(file.type||"FILE").toUpperCase();
+    R.status.textContent=(file.type||"File")+" • "+formatSize(file.size);
+    R.root.classList.add("is-open");
+    R.root.setAttribute("aria-hidden","false");
+    document.body.classList.add("ww-reader-lock");
+    R.content.innerHTML="";
+    R.currentUrl=URL.createObjectURL(file);
+  }
+
+  function formatSize(n){
+    if(!Number.isFinite(n)) return "";
+    if(n<1024) return n+" B";
+    if(n<1048576) return (n/1024).toFixed(1)+" KB";
+    if(n<1073741824) return (n/1048576).toFixed(1)+" MB";
+    return (n/1073741824).toFixed(1)+" GB";
+  }
+
+  function renderFile(file){
+    openShell(file);
+    var type=file.type||"";
+    var name=(file.name||"").toLowerCase();
+    var ext=name.includes(".")?name.split(".").pop():"";
+
+    if(type==="application/pdf" || ext==="pdf"){
+      var frame=document.createElement("iframe");
+      frame.src=R.currentUrl;
+      frame.title=file.name;
+      R.content.appendChild(frame);
+      return;
+    }
+
+    if(type.startsWith("image/") || ["png","jpg","jpeg","gif","webp","svg","bmp"].includes(ext)){
+      var img=document.createElement("img");
+      img.src=R.currentUrl; img.alt=file.name;
+      R.content.appendChild(img);
+      return;
+    }
+
+    if(type.startsWith("video/") || ["mp4","webm","ogg","mov"].includes(ext)){
+      var video=document.createElement("video");
+      video.className="ww-reader-video";
+      video.controls=true; video.playsInline=true; video.src=R.currentUrl;
+      R.content.appendChild(video);
+      return;
+    }
+
+    if(type.startsWith("audio/") || ["mp3","wav","m4a","aac","ogg","flac"].includes(ext)){
+      var audio=document.createElement("audio");
+      audio.className="ww-reader-audio";
+      audio.controls=true; audio.src=R.currentUrl;
+      R.content.appendChild(audio);
+      return;
+    }
+
+    if(type.startsWith("text/") || ["txt","csv","md","json","xml","js","css","html"].includes(ext)){
+      file.text().then(function(text){
+        if(!R.root.classList.contains("is-open")) return;
+        var pre=document.createElement("pre");
+        pre.className="ww-reader-text";
+        pre.textContent=text;
+        R.content.innerHTML="";
+        R.content.appendChild(pre);
+      }).catch(showUnsupported);
+      return;
+    }
+
+    showUnsupported();
+  }
+
+  function showUnsupported(){
+    R.content.innerHTML='<div class="ww-reader-empty"><strong>This file type cannot be rendered directly.</strong><span>You can still use the ↗ button to open it with a compatible application.</span></div>';
+  }
+
+  // Public function: open a resource whose FileSystemFileHandle was stored.
+  window.wwOpenStoredResource=async function(handle, name){
+    try{
+      if(!handle || typeof handle.getFile!=="function"){
+        throw new Error("No persistent file handle available.");
+      }
+
+      // Use the existing permission when available. Ask only if permission
+      // is missing/expired; normal opens do not show a picker.
+      if(typeof handle.queryPermission==="function"){
+        var p=await handle.queryPermission({mode:"read"});
+        if(p!=="granted" && typeof handle.requestPermission==="function"){
+          p=await handle.requestPermission({mode:"read"});
+        }
+        if(p!=="granted") throw new Error("File permission is not granted.");
+      }
+
+      var file=await handle.getFile();
+      renderFile(file);
+      return true;
+    }catch(err){
+      console.warn("White Wolf reader:",err);
+      if(R.root){
+        if(!R.root.classList.contains("is-open")) openShell(new File([""],name||"Resource",{type:"application/octet-stream"}));
+        R.content.innerHTML='<div class="ww-reader-empty"><strong>تعذر الوصول إلى الملف.</strong><span>قد يكون الملف نُقل أو حُذف، أو أن إذن الوصول انتهى. يمكنك إعادة ربط الملف من Resources مرة واحدة.</span></div>';
+        R.status.textContent="Access unavailable";
+      }
+      return false;
+    }
+  };
+
+  // Public helper for direct File objects, useful for the fallback picker.
+  window.wwOpenFileInReader=function(file){
+    if(file) renderFile(file);
+  };
+
+  if(document.readyState==="loading"){
+    document.addEventListener("DOMContentLoaded",initReader);
+  }else{
+    initReader();
+  }
+})();
+
+/* V43 resource reader hook: intercept clicks on resource cards/buttons that
+   carry a persistent resource id/handle. */
+(function(){
+  function findResourceHandle(el){
+    var id = el && (el.dataset ? (el.dataset.resourceId || el.dataset.id) : null);
+    if(!id) return null;
+    try{
+      if(typeof window.getResourceFileHandle==="function") return window.getResourceFileHandle(id);
+    }catch(e){}
+    return null;
+  }
+
+  document.addEventListener("click", function(e){
+    var el=e.target.closest ? e.target.closest("[data-resource-open],[data-open-resource]") : null;
+    if(!el) return;
+    var id=el.dataset.resourceOpen || el.dataset.openResource || el.dataset.resourceId;
+    if(!id) return;
+    if(typeof window.wwGetStoredResourceHandle==="function"){
+      e.preventDefault(); e.stopPropagation();
+      window.wwGetStoredResourceHandle(id).then(function(result){
+        if(result && result.handle) window.wwOpenStoredResource(result.handle,result.name);
+      });
+    }
+  }, true);
+})();
+
+(function(){
+  window.wwGetStoredResourceHandle=async function(id){
+    try{
+      var dbName=null;
+      // Detect likely existing DB from IndexedDB databases where supported.
+      if(indexedDB.databases){
+        var dbs=await indexedDB.databases();
+        var match=dbs.find(function(x){return x.name && /white|wolf|scholar/i.test(x.name);});
+        if(match) dbName=match.name;
+      }
+      // Fall back to the most common V42 naming convention if detection is unavailable.
+      if(!dbName) dbName=DB_NAME;
+
+      return await new Promise(function(resolve,reject){
+        var req=indexedDB.open(dbName);
+        req.onerror=function(){reject(req.error||new Error("IndexedDB unavailable"));};
+        req.onsuccess=function(){
+          var db=req.result;
+          if(!db.objectStoreNames.contains("resourceFiles")){
+            db.close(); reject(new Error("resourceFiles store not found")); return;
+          }
+          var tx=db.transaction("resourceFiles","readonly");
+          var store=tx.objectStore("resourceFiles");
+          var keyCandidates=[id,Number(id)];
+          var i=0;
+          function next(){
+            if(i>=keyCandidates.length){db.close();resolve(null);return;}
+            var r=store.get(keyCandidates[i++]);
+            r.onerror=next;
+            r.onsuccess=function(){
+              if(r.result){
+                var v=r.result;
+                var handle=v.handle || v.fileHandle || v.file || v.value || null;
+                var name=v.name || v.fileName || "Resource";
+                if(handle && typeof handle.getFile==="function"){
+                  db.close(); resolve({handle:handle,name:name}); return;
+                }
+              }
+              next();
+            };
+          }
+          next();
+        };
+      });
+    }catch(e){
+      console.warn("V43 resource adapter:",e);
+      return null;
+    }
+  };
+})();
+
+
+/* WHITE WOLF V45 — OFFLINE/PWA */
+(function(){
+  if(!("serviceWorker" in navigator)) return;
+  window.addEventListener("load", function(){
+    navigator.serviceWorker.register("./sw.js").catch(function(){});
+  });
+})();
+
+
+/* =========================================================
+   WHITE WOLF V45 — BACKUP / RESTORE
+   Exports localStorage + Smart Review + selected IndexedDB
+   metadata. Phone file bytes and file handles are deliberately
+   excluded: the original resources remain in phone storage.
+   ========================================================= */
+(function(){
+"use strict";
+var B={modal:null,status:null,input:null};
+
+function setStatus(msg,ok){
+  if(B.status){B.status.textContent=msg||"";B.status.style.color=ok?"#6ae8a5":"";}
+}
+function openBackup(){
+  if(!B.modal)return;
+  B.modal.classList.add("is-open");B.modal.setAttribute("aria-hidden","false");document.body.style.overflow="hidden";
+  setStatus("");
+}
+function closeBackup(){
+  if(!B.modal)return;
+  B.modal.classList.remove("is-open");B.modal.setAttribute("aria-hidden","true");document.body.style.overflow="";
+}
+function collectLocalStorage(){
+  var data={};
+  for(var i=0;i<localStorage.length;i++){
+    var k=localStorage.key(i),v=localStorage.getItem(k);
+    try{data[k]=JSON.parse(v)}catch(e){data[k]=v}
+  }
+  return data;
+}
+function collectResourceMetadata(){
+  return new Promise(function(resolve){
+    var req=indexedDB.open(DB_NAME,2);
+    req.onerror=function(){resolve([])};
+    req.onsuccess=function(){
+      var db=req.result;
+      if(!db.objectStoreNames.contains("resourceFiles")){resolve([]);return}
+      try{
+        var tx=db.transaction("resourceFiles","readonly"),store=tx.objectStore("resourceFiles"),items=[];
+        var cur=store.openCursor();
+        cur.onerror=function(){resolve(items)};
+        cur.onsuccess=function(e){
+          var c=e.target.result;
+          if(!c){resolve(items);return}
+          var v=c.value||{};
+          // Never serialize FileSystemFileHandle or Blob/file bytes.
+          var safe={};
+          Object.keys(v).forEach(function(k){
+            if(/handle|blob|filedata|filebytes|file$/i.test(k))return;
+            var x=v[k];
+            if(["string","number","boolean"].includes(typeof x)||x===null) safe[k]=x;
+          });
+          items.push(safe);c.continue();
+        };
+      }catch(e){resolve([])}
+    };
+  });
+}
+function downloadJSON(obj,name){
+  var blob=new Blob([JSON.stringify(obj,null,2)],{type:"application/json"});
+  var url=URL.createObjectURL(blob),a=document.createElement("a");
+  a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();
+  setTimeout(function(){URL.revokeObjectURL(url)},1000);
+}
+async function exportBackup(){
+  try{
+    setStatus("Preparing backup…");
+    var payload={
+      format:"white-wolf-scholar-backup",
+      version:45,
+      exportedAt:new Date().toISOString(),
+      note:"Personal data backup. Local phone resource files and FileSystemFileHandles are intentionally excluded.",
+      localStorage:collectLocalStorage(),
+      resourceMetadata:await collectResourceMetadata()
+    };
+    var stamp=new Date().toISOString().replace(/[:.]/g,"-").slice(0,19);
+    downloadJSON(payload,"white-wolf-backup-"+stamp+".json");
+    setStatus("Backup exported successfully.",true);
+  }catch(e){setStatus("Backup failed.")}
+}
+function restoreLocalStorage(data){
+  if(!data||typeof data!=="object")return 0;
+  var count=0;
+  Object.keys(data).forEach(function(k){
+    try{
+      var v=data[k];
+      localStorage.setItem(k,typeof v==="string"?v:JSON.stringify(v));count++;
+    }catch(e){}
+  });
+  return count;
+}
+function validateBackup(x){
+  return x && x.format==="white-wolf-scholar-backup" && x.localStorage && typeof x.localStorage==="object";
+}
+function restoreBackup(file){
+  var reader=new FileReader();
+  reader.onload=function(){
+    try{
+      var data=JSON.parse(reader.result);
+      if(!validateBackup(data)){setStatus("Invalid White Wolf backup file.");return}
+      var n=restoreLocalStorage(data.localStorage);
+      setStatus("Restored "+n+" data entries. Reloading…",true);
+      setTimeout(function(){location.reload()},700);
+    }catch(e){setStatus("Could not read this backup.")}
+  };
+  reader.onerror=function(){setStatus("Could not read this backup.")}
+  reader.readAsText(file);
+}
+function init(){
+  B.modal=document.getElementById("ww-backup-modal");
+  B.status=document.getElementById("ww-backup-status");
+  B.input=document.getElementById("ww-backup-file");
+  if(!B.modal)return;
+  document.getElementById("ww-backup-close").onclick=closeBackup;
+  B.modal.querySelectorAll("[data-backup-close]").forEach(function(x){x.onclick=closeBackup});
+  document.getElementById("ww-backup-export").onclick=exportBackup;
+  document.getElementById("ww-backup-import").onclick=function(){B.input.click()};
+  B.input.onchange=function(){if(B.input.files&&B.input.files[0])restoreBackup(B.input.files[0]);B.input.value=""};
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&B.modal.classList.contains("is-open"))closeBackup()});
+  window.WWBackup={open:openBackup,close:closeBackup,export:exportBackup};
+  // Accept future/settings buttons without depending on one exact DOM structure.
+  document.addEventListener("click",function(e){
+    var el=e.target.closest&&e.target.closest("[data-backup],.backup-btn,.open-backup");
+    if(el){e.preventDefault();openBackup();}
+  });
+}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();
+})();
+
+/* =========================================================
+   WHITE WOLF V46 — GLOBAL SEARCH + RESOURCE LIBRARY
+   Non-invasive index over current app state, local resources and
+   resource metadata. No external dependencies.
+   ========================================================= */
+(function(){
+  "use strict";
+  var KEY="wwResourceLibraryMeta";
+  var overlay=null,input=null,results=null,summary=null,filter="all",query="";
+  var META={};
+  try{META=JSON.parse(localStorage.getItem(KEY)||"{}")||{}}catch(e){META={}}
+
+  function esc(v){return String(v==null?"":v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+  function saveMeta(){try{localStorage.setItem(KEY,JSON.stringify(META))}catch(e){}}
+  function markRecent(id){if(!id)return;META[id]=META[id]||{};META[id].lastOpened=new Date().toISOString();saveMeta()}
+  function isFav(id){return !!(META[id]&&META[id].favorite)}
+  function toggleFav(id){META[id]=META[id]||{};META[id].favorite=!META[id].favorite;saveMeta();renderResults()}
+
+  function add(arr,type,title,sub,action,score,extra){
+    if(!title)return;arr.push(Object.assign({type:type,title:String(title),sub:String(sub||""),action:action||null,score:score||0},extra||{}));
+  }
+  function walk(obj,arr,path,seen,depth){
+    if(depth>5||obj==null)return;
+    var t=typeof obj;
+    if(t!=="object")return;
+    if(seen.indexOf(obj)!==-1)return;seen.push(obj);
+    if(Array.isArray(obj)){
+      obj.slice(0,500).forEach(function(v,i){walk(v,arr,path+" / "+i,seen,depth+1)});return;
+    }
+    var keys=Object.keys(obj);
+    keys.slice(0,300).forEach(function(k){
+      var v=obj[k], low=k.toLowerCase();
+      if(v==null)return;
+      if(typeof v==="string" && v.length>1 && v.length<220 && /^(name|title|subject|description|question|front|prompt|term|label|text|topic|goal)$/i.test(k)){
+        var kind=/question|front|prompt|term/.test(low)?"flashcard":/topic/.test(low)?"topic":"data";
+        add(arr,kind,v,path.replace(/^\s*\/\s*/,""),null,0,{key:k});
+      }
+      if(typeof v==="object")walk(v,arr,path+" / "+k,seen,depth+1);
+    });
+  }
+  function buildIndex(){
+    var arr=[], seen=[];
+    try{(state.subjects||[]).forEach(function(s){add(arr,"subject",s.name,"Master / Matières",function(){navigate("subject",{subjectId:s.id})},0,{id:s.id})})}catch(e){}
+    try{(state.topics||[]).forEach(function(t){add(arr,"topic",t.title||t.name,"Topic / Master",function(){navigate("topic",{topicId:t.id})},0,{id:t.id})})}catch(e){}
+    try{Object.keys(state.languages||{}).forEach(function(k){var l=state.languages[k];if(l&&l.name)add(arr,"language",l.name,"Growth / Langues",function(){state.langId=l.id;state.levelKey=langCurrentLevel(l.id);navigate("language")},0,{id:l.id})})}catch(e){}
+    try{(state.tasks||[]).forEach(function(t){add(arr,"task",t.text||t.title,"Planning",null,0,{id:t.id})})}catch(e){}
+    try{(state.exams||[]).forEach(function(x){add(arr,"exam",x.title,"Planning / Examens",null,0,{id:x.id})})}catch(e){}
+    try{(state.errors||[]).forEach(function(x){add(arr,"error",x.description,"Error Lab / Révision",null,0,{id:x.id})})}catch(e){}
+    try{(state.flashcards||{}).forEach?null:Object.keys(state.flashcards||{}).forEach(function(lang){(state.flashcards[lang]||[]).forEach(function(c){add(arr,"flashcard",c.question,"Flashcards",null,0,{id:c.id})})})}catch(e){}
+    try{walk({programming:state.programming,settings:state.settings,onboardingData:state.onboardingData},arr,"App",seen,0)}catch(e){}
+    getAllResources().forEach(function(r){
+      var rid="res:"+r.subjectId+":"+r.id;
+      add(arr,"resource",r.title,(r.subjectName||"Matière")+" / "+r.folder,function(){openResource(r)},0,{id:rid,resource:r})
+    });
+    return arr;
+  }
+  function typeLabel(t){return {subject:"MATIÈRE",topic:"TOPIC",language:"LANGUE",task:"TÂCHE",exam:"EXAMEN",error:"ERREUR",flashcard:"FLASHCARD",resource:"RESSOURCE",data:"DONNÉE"}[t]||"RÉSULTAT"}
+  function icon(t){return {subject:"📚",topic:"🎯",language:"🌍",task:"✓",exam:"📝",error:"⚠️",flashcard:"🧠",resource:"📎",data:"◆"}[t]||"◆"}
+  function scoreItem(x,q){
+    var t=(x.title+" "+x.sub).toLowerCase(), n=q.toLowerCase(); if(!n)return 0;
+    if(t===n)return 100;if(x.title.toLowerCase()===n)return 95;if(x.title.toLowerCase().indexOf(n)===0)return 85;
+    var words=n.split(/\s+/).filter(Boolean), hits=words.filter(function(w){return t.indexOf(w)!==-1}).length;
+    return hits?(50+Math.round(hits/words.length*30)):0;
+  }
+  function search(q){
+    var idx=buildIndex();
+    if(!q.trim())return idx.filter(function(x){return x.type==="resource"&&META[x.id]&&META[x.id].lastOpened}).sort(function(a,b){return new Date(META[b.id].lastOpened)-new Date(META[a.id].lastOpened)}).slice(0,8);
+    return idx.map(function(x){x._score=scoreItem(x,q);return x}).filter(function(x){return x._score>0&&(filter==="all"||x.type===filter)}).sort(function(a,b){return b._score-a._score}).slice(0,30);
+  }
+  function openResource(r){
+    var rid="res:"+r.subjectId+":"+r.id;markRecent(rid);
+    if(r.fileKey){wwOpenResourceInApp(r.subjectId,r.id);return}
+    if(r.url){window.open(r.url,"_blank","noopener");return}
+  }
+  function libraryResources(){
+    var all=getAllResources();
+    return all.map(function(r){r._rid="res:"+r.subjectId+":"+r.id;return r});
+  }
+  function renderLibrary(){
+    var all=libraryResources();
+    var fav=all.filter(function(r){return isFav(r._rid)});
+    var recent=all.filter(function(r){return META[r._rid]&&META[r._rid].lastOpened}).sort(function(a,b){return new Date(META[b._rid].lastOpened)-new Date(META[a._rid].lastOpened)}).slice(0,8);
+    var total=all.length, studied=all.filter(function(r){return r.studied}).length;
+    var rows=all.slice().sort(function(a,b){return (isFav(b._rid)-isFav(a._rid))||(new Date((META[b._rid]||{}).lastOpened||0)-new Date((META[a._rid]||{}).lastOpened||0))}).slice(0,60);
+    return '<div class="ww-library-wrap">'+
+      '<div class="ww-library-head"><div><span class="ww-v46-kicker">WHITE WOLF / RESOURCE LIBRARY</span><h2>Resource Library</h2><p>'+total+' ressources · '+studied+' étudiées · '+fav.length+' favorites</p></div><button class="ww-lib-search" data-global-search>⌕ Rechercher partout</button></div>'+
+      '<div class="ww-library-stats"><div><b>'+total+'</b><span>Total</span></div><div><b>'+fav.length+'</b><span>Favorites</span></div><div><b>'+recent.length+'</b><span>Recent</span></div><div><b>'+studied+'</b><span>Studied</span></div></div>'+
+      (recent.length?'<section class="ww-lib-section"><h3>↻ Recently opened</h3><div class="ww-lib-grid">'+recent.map(resourceCard).join('')+'</div></section>':'')+
+      (fav.length?'<section class="ww-lib-section"><h3>★ Favorites</h3><div class="ww-lib-grid">'+fav.slice(0,12).map(resourceCard).join('')+'</div></section>':'')+
+      '<section class="ww-lib-section"><h3>▦ All resources</h3><div class="ww-lib-grid">'+rows.map(resourceCard).join('')+'</div></section>'+'</div>';
+  }
+  function resourceCard(r){
+    return '<article class="ww-lib-card"><button class="ww-lib-star '+(isFav(r._rid)?"active":"")+'" data-lib-fav="'+esc(r._rid)+'" title="Favorite">★</button><div class="ww-lib-icon">'+getResourceIcon(r.type)+'</div><div class="ww-lib-card-body"><strong>'+esc(r.title)+'</strong><span>'+esc(r.subjectName)+' · '+esc(r.folder)+'</span><small>'+getResourceTypeLabel(r.type)+(r.studied?' · ✓ Studied':'')+(META[r._rid]&&META[r._rid].lastOpened?' · Recently opened':'')+'</small></div><button class="ww-lib-open" data-lib-open="'+esc(r.subjectId+'|'+r.id)+'">Open</button></article>';
+  }
+  function ensureOverlay(){
+    if(overlay)return;
+    overlay=document.createElement("div");overlay.className="ww-global-search";overlay.id="ww-global-search";overlay.innerHTML='<div class="ww-gs-backdrop" data-gs-close></div><section class="ww-gs-panel" role="dialog" aria-modal="true" aria-label="Global Search"><header class="ww-gs-header"><div class="ww-gs-brand"><span class="ww-v46-kicker">WHITE WOLF / GLOBAL INDEX</span><strong>Search everything</strong></div><button class="ww-gs-close" data-gs-close>×</button></header><div class="ww-gs-input-wrap"><span>⌕</span><input id="ww-gs-input" autocomplete="off" placeholder="Matières, topics, flashcards, ressources, tâches…"><kbd>ESC</kbd></div><div class="ww-gs-filters"><button data-gs-filter="all" class="active">All</button><button data-gs-filter="resource">Resources</button><button data-gs-filter="subject">Subjects</button><button data-gs-filter="topic">Topics</button><button data-gs-filter="flashcard">Flashcards</button><button data-gs-filter="task">Tasks</button></div><div id="ww-gs-summary" class="ww-gs-summary"></div><div id="ww-gs-results" class="ww-gs-results"></div></section>';
+    document.body.appendChild(overlay);input=overlay.querySelector("#ww-gs-input");results=overlay.querySelector("#ww-gs-results");summary=overlay.querySelector("#ww-gs-summary");
+    input.addEventListener("input",function(){query=this.value;renderResults()});
+    overlay.querySelectorAll("[data-gs-filter]").forEach(function(b){b.onclick=function(){filter=this.dataset.gsFilter;overlay.querySelectorAll("[data-gs-filter]").forEach(function(x){x.classList.toggle("active",x===b)});renderResults()}});
+    overlay.addEventListener("click",function(e){
+      var close=e.target.closest&&e.target.closest("[data-gs-close]");if(close){closeSearch();return}
+      var r=e.target.closest&&e.target.closest("[data-gs-open]");if(r){var idx=Number(r.dataset.gsOpen),list=search(query);if(list[idx]){var x=list[idx];if(x.type==="resource")openResource(x.resource);else if(x.action)x.action();closeSearch()}}
+      var lf=e.target.closest&&e.target.closest("[data-gs-fav]");if(lf){e.stopPropagation();toggleFav(lf.dataset.gsFav)}
+    });
+  }
+  function renderResults(){
+    if(!results)return;
+    var list=search(query);
+    summary.textContent=query.trim()?(list.length+" résultat"+(list.length===1?"":"s")):"Dernières ressources ouvertes";
+    if(!list.length){results.innerHTML='<div class="ww-gs-empty"><span>⌕</span><strong>Aucun résultat</strong><small>Essaie un nom de matière, un topic, une ressource ou une tâche.</small></div>';return}
+    results.innerHTML=list.map(function(x,i){var fav=x.type==="resource"?isFav(x.id):false;return '<button class="ww-gs-result" data-gs-open="'+i+'"><span class="ww-gs-icon">'+icon(x.type)+'</span><span class="ww-gs-copy"><strong>'+esc(x.title)+'</strong><small>'+esc(x.sub)+'</small></span><span class="ww-gs-type">'+typeLabel(x.type)+'</span>'+(x.type==="resource"?'<span class="ww-gs-fav '+(fav?'active':'')+'" data-gs-fav="'+esc(x.id)+'">★</span>':'')+'<span class="ww-gs-arrow">›</span></button>'}).join('');
+  }
+  function openSearch(){ensureOverlay();overlay.classList.add("is-open");document.body.classList.add("ww-search-lock");setTimeout(function(){input.focus();input.select()},30);renderResults()}
+  function closeSearch(){if(!overlay)return;overlay.classList.remove("is-open");document.body.classList.remove("ww-search-lock")}
+  function attach(){
+    document.addEventListener("click",function(e){
+      var b=e.target.closest&&e.target.closest("[data-global-search],.global-search-btn,.open-global-search");if(b){e.preventDefault();openSearch();return}
+      var lf=e.target.closest&&e.target.closest("[data-lib-fav]");if(lf){e.stopPropagation();toggleFav(lf.dataset.libFav);return}
+      var lo=e.target.closest&&e.target.closest("[data-lib-open]");if(lo){e.stopPropagation();var p=lo.dataset.libOpen.split("|");var r=(getAllResources()||[]).find(function(x){return x.subjectId===p[0]&&x.id===p[1]});if(r)openResource(r);return}
+      var ro=e.target.closest&&e.target.closest("[data-open-resource]");if(ro){var pp=ro.dataset.openResource.split("|");markRecent("res:"+pp[0]+":"+pp[1]);}
+    },true);
+    document.addEventListener("keydown",function(e){if(e.key==="Escape"&&overlay&&overlay.classList.contains("is-open"))closeSearch();if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="k"){e.preventDefault();openSearch()}});
+  }
+  window.WWGlobalSearch={open:openSearch,close:closeSearch,search:function(q){query=q||"";openSearch()}};
+  // The existing Resources renderer calls this hook, preserving its original UI.
+  window.WWV46LibraryHTML=renderLibrary;
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",attach);else attach();
 })();

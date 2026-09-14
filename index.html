@@ -4,9 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
 <meta name="theme-color" content="#0a0e14">
-<link rel="icon" type="image/png" href="logo-v2-icon-centered.png">
+<link rel="icon" type="image/svg+xml" href="logo.svg">
 <title>White Wolf Scholar</title>
 <link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 </head>
 <body>
 
@@ -33,5 +36,61 @@
 <div class="toast" id="toast"></div>
 
 <script src="script.js"></script>
+
+<!-- WHITE WOLF V43 — INTERNAL FILE READER -->
+<div id="ww-file-reader" class="ww-file-reader" aria-hidden="true">
+  <div class="ww-file-reader-backdrop" data-reader-close></div>
+  <section class="ww-file-reader-panel" role="dialog" aria-modal="true" aria-label="File reader">
+    <header class="ww-file-reader-header">
+      <button class="ww-reader-btn" id="ww-reader-close" type="button" aria-label="Close">×</button>
+      <div class="ww-reader-title-wrap">
+        <span class="ww-reader-type" id="ww-reader-type">FILE</span>
+        <strong id="ww-reader-title">Resource</strong>
+      </div>
+      <button class="ww-reader-btn" id="ww-reader-external" type="button" aria-label="Open externally" title="Open externally">↗</button>
+    </header>
+    <main id="ww-reader-content" class="ww-file-reader-content"></main>
+    <footer class="ww-file-reader-footer">
+      <span id="ww-reader-status">Ready</span>
+    </footer>
+  </section>
+</div>
+
+
+<!-- WHITE WOLF V45 — BACKUP & RESTORE -->
+<div id="ww-backup-modal" class="ww-backup-modal" aria-hidden="true">
+  <div class="ww-backup-backdrop" data-backup-close></div>
+  <section class="ww-backup-panel" role="dialog" aria-modal="true" aria-label="Backup and Restore">
+    <header class="ww-backup-header">
+      <button class="ww-backup-close" id="ww-backup-close" type="button">×</button>
+      <div>
+        <span class="ww-backup-kicker">WHITE WOLF / DATA SAFETY</span>
+        <h2>Backup & Restore</h2>
+      </div>
+    </header>
+    <main class="ww-backup-body">
+      <div class="ww-backup-card">
+        <div class="ww-backup-icon">↥</div>
+        <div class="ww-backup-copy">
+          <strong>Export your progress</strong>
+          <span>Save your study data as a portable JSON backup.</span>
+        </div>
+        <button class="ww-backup-action" id="ww-backup-export" type="button">EXPORT</button>
+      </div>
+      <div class="ww-backup-card">
+        <div class="ww-backup-icon">↧</div>
+        <div class="ww-backup-copy">
+          <strong>Restore a backup</strong>
+          <span>Import a White Wolf JSON backup without uploading it anywhere.</span>
+        </div>
+        <button class="ww-backup-action" id="ww-backup-import" type="button">IMPORT</button>
+      </div>
+      <input id="ww-backup-file" type="file" accept=".json,application/json" hidden>
+      <div id="ww-backup-status" class="ww-backup-status"></div>
+      <p class="ww-backup-note">Backup files stay on your device unless you choose to share them. File handles for phone resources are not copied into the backup.</p>
+    </main>
+  </section>
+</div>
+
 </body>
 </html>

@@ -1,5 +1,5 @@
 /* ============================================================
-   WHITE WOLF SCHOLAR — STYLE V39
+   WHITE WOLF SCHOLAR — STYLE 
    Full with Advanced Stats
    ============================================================ */
 
@@ -258,7 +258,7 @@ textarea{resize:vertical;min-height:60px}
 .res-group-header .rgh-arrow{font-size:14px;color:#6b7f9a;transition:transform .2s}
 
 /* ============================================================
-   ADVANCED STATS (V39)
+   ADVANCED STATS ()
    ============================================================ */
 .stats-hero{background:linear-gradient(135deg,#16222e,#111a24);border-radius:20px;padding:18px;margin-bottom:16px;border:1px solid #1d2735}
 .stats-hero .sh-top{display:flex;align-items:center;gap:14px;margin-bottom:14px}
@@ -1116,3 +1116,160 @@ body::after{
   .ww-hero-content p{font-size:12px!important}
   .ww-hero-wolf{width:108px!important;opacity:.55!important}
 }
+
+/* ============================================================
+   RESOURCES V41 — files, direct links & study analytics
+   ============================================================ */
+.res-header .res-stats{grid-template-columns:repeat(4,1fr)}
+.res-progress{height:7px;background:#0a0e14;border-radius:99px;overflow:hidden;margin-top:12px;border:1px solid #1a2430}
+.res-progress-fill{height:100%;background:linear-gradient(90deg,#4b7bec,#6ae8a5);border-radius:99px;transition:width .35s ease}
+.res-card.is-studied{box-shadow:inset 3px 0 0 #6ae8a5}
+.rc-study{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-top:8px;padding-top:9px;border-top:1px solid #172230}
+.rc-study button{border:1px solid #26374b;border-radius:8px;padding:6px 9px;font-size:11px;cursor:pointer;transition:.2s}
+.btn-study{background:#111c29;color:#8ba2c0}
+.btn-study.active{background:#15372b;border-color:#3e9b72;color:#6ae8a5;font-weight:600}
+.btn-time{background:#18253a;color:#8fb3e6}
+.study-time{font-size:11px;color:#7e93ac;margin-left:auto}
+.res-input-label{font-size:11px;color:#8ba2c0;font-weight:600;margin-bottom:-6px}
+.res-or{text-align:center;color:#51647b;font-size:11px}
+.res-card .rc-actions .btn-open{cursor:pointer}
+@media(max-width:560px){.res-header .res-stats{grid-template-columns:repeat(2,1fr)}.study-time{margin-left:0}.rc-study{gap:6px}}
+
+
+/* =========================================================
+   WHITE WOLF V43 — INTERNAL FILE READER
+   ========================================================= */
+.ww-file-reader{
+  position:fixed; inset:0; z-index:99999; display:none;
+  background:rgba(2,7,14,.82); backdrop-filter:blur(12px);
+}
+.ww-file-reader.is-open{display:flex;align-items:stretch;justify-content:center}
+.ww-file-reader-backdrop{position:absolute;inset:0}
+.ww-file-reader-panel{
+  position:relative;width:min(1180px,100%);height:100%;
+  display:flex;flex-direction:column;overflow:hidden;
+  background:#08101a;border-left:1px solid rgba(255,255,255,.08);
+  border-right:1px solid rgba(255,255,255,.08);
+  box-shadow:0 20px 80px rgba(0,0,0,.5);
+}
+.ww-file-reader-header{
+  min-height:58px;display:flex;align-items:center;gap:12px;
+  padding:8px 12px;background:rgba(9,17,28,.96);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.ww-reader-btn{
+  width:40px;height:40px;border:0;border-radius:12px;
+  background:rgba(255,255,255,.07);color:#eef4ff;
+  font-size:22px;cursor:pointer;flex:0 0 auto;
+}
+.ww-reader-btn:hover{background:rgba(255,255,255,.13)}
+.ww-reader-title-wrap{min-width:0;flex:1;display:flex;flex-direction:column;gap:2px}
+.ww-reader-title-wrap strong{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:14px}
+.ww-reader-type{font-size:10px;letter-spacing:.14em;opacity:.58}
+.ww-file-reader-content{
+  flex:1;min-height:0;overflow:auto;position:relative;
+  display:flex;align-items:stretch;justify-content:center;
+  background:#050a11;
+}
+.ww-file-reader-content iframe,.ww-file-reader-content embed{
+  width:100%;height:100%;border:0;background:#fff;
+}
+.ww-file-reader-content img{
+  max-width:100%;max-height:100%;width:auto;height:auto;
+  object-fit:contain;margin:auto;display:block;
+}
+.ww-reader-video,.ww-reader-audio{
+  width:min(100%,1000px);max-height:100%;margin:auto;outline:none;
+}
+.ww-reader-audio{width:min(90%,720px)}
+.ww-reader-text{
+  width:min(920px,100%);margin:0 auto;padding:28px;
+  color:#dfe8f6;white-space:pre-wrap;overflow:auto;
+  font:14px/1.75 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+.ww-reader-empty{margin:auto;padding:28px;max-width:560px;text-align:center;color:#b8c4d6}
+.ww-reader-empty strong{display:block;color:#eef4ff;margin-bottom:8px}
+.ww-file-reader-footer{
+  min-height:32px;display:flex;align-items:center;padding:0 14px;
+  color:#8fa0b7;font-size:11px;background:#09121d;
+  border-top:1px solid rgba(255,255,255,.07);
+}
+@media(max-width:700px){
+  .ww-file-reader-header{min-height:54px}
+  .ww-reader-btn{width:38px;height:38px}
+  .ww-reader-text{padding:20px 16px;font-size:13px}
+}
+
+body.ww-reader-lock{overflow:hidden!important}
+
+/* WHITE WOLF V43 — INTERNAL RESOURCE READER */
+.ww-file-reader{position:fixed;inset:0;z-index:99999;display:none;background:rgba(2,7,14,.84);backdrop-filter:blur(12px)}
+.ww-file-reader.is-open{display:flex;align-items:stretch;justify-content:center}
+.ww-file-reader-backdrop{position:absolute;inset:0}
+.ww-file-reader-panel{position:relative;width:min(1180px,100%);height:100%;display:flex;flex-direction:column;overflow:hidden;background:#08101a;border-left:1px solid rgba(255,255,255,.08);border-right:1px solid rgba(255,255,255,.08);box-shadow:0 20px 80px rgba(0,0,0,.5)}
+.ww-file-reader-header{min-height:58px;display:flex;align-items:center;gap:12px;padding:8px 12px;background:rgba(9,17,28,.97);border-bottom:1px solid rgba(255,255,255,.08)}
+.ww-reader-btn{width:40px;height:40px;border:0;border-radius:12px;background:rgba(255,255,255,.07);color:#eef4ff;font-size:22px;cursor:pointer;flex:0 0 auto}
+.ww-reader-btn:hover{background:rgba(255,255,255,.13)}
+.ww-reader-title-wrap{min-width:0;flex:1;display:flex;flex-direction:column;gap:2px}
+.ww-reader-title-wrap strong{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:14px}
+.ww-reader-type{font-size:10px;letter-spacing:.14em;opacity:.58}
+.ww-file-reader-content{flex:1;min-height:0;overflow:auto;position:relative;display:flex;align-items:stretch;justify-content:center;background:#050a11}
+.ww-file-reader-content iframe,.ww-file-reader-content embed{width:100%;height:100%;border:0;background:#fff}
+.ww-file-reader-content img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;margin:auto;display:block}
+.ww-reader-video{width:min(100%,1000px);max-height:100%;height:auto;margin:auto;outline:none}
+.ww-reader-audio{width:min(90%,720px);margin:auto}
+.ww-reader-text{width:min(920px,100%);margin:0 auto;padding:28px;color:#dfe8f6;white-space:pre-wrap;overflow:auto;font:14px/1.75 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.ww-reader-empty{margin:auto;padding:28px;max-width:560px;text-align:center;color:#b8c4d6;line-height:1.7}
+.ww-reader-empty strong{display:block;color:#eef4ff;margin-bottom:8px}
+.ww-file-reader-footer{min-height:32px;display:flex;align-items:center;padding:0 14px;color:#8fa0b7;font-size:11px;background:#09121d;border-top:1px solid rgba(255,255,255,.07)}
+body.ww-reader-lock{overflow:hidden}
+@media(max-width:700px){.ww-file-reader-header{min-height:54px}.ww-reader-btn{width:38px;height:38px}.ww-reader-text{padding:20px 16px;font-size:13px}}
+
+
+/* =========================================================
+   WHITE WOLF V45 — BACKUP & RESTORE
+   ========================================================= */
+.ww-backup-modal{position:fixed;inset:0;z-index:100001;display:none;background:rgba(2,7,14,.84);backdrop-filter:blur(14px)}
+.ww-backup-modal.is-open{display:flex;align-items:center;justify-content:center}
+.ww-backup-backdrop{position:absolute;inset:0}
+.ww-backup-panel{position:relative;width:min(650px,calc(100% - 24px));max-height:calc(100% - 24px);overflow:auto;background:#09121d;border:1px solid rgba(255,255,255,.09);border-radius:22px;box-shadow:0 30px 100px rgba(0,0,0,.55)}
+.ww-backup-header{display:flex;align-items:center;gap:12px;padding:16px;border-bottom:1px solid rgba(255,255,255,.07)}
+.ww-backup-close{width:40px;height:40px;border:0;border-radius:12px;background:rgba(255,255,255,.07);color:#eef4ff;font-size:24px;cursor:pointer}
+.ww-backup-kicker{font-size:9px;letter-spacing:.16em;opacity:.52}
+.ww-backup-header h2{margin:3px 0 0;font-size:20px}
+.ww-backup-body{padding:18px}
+.ww-backup-card{display:flex;align-items:center;gap:12px;padding:15px;margin-bottom:10px;border:1px solid rgba(255,255,255,.07);border-radius:16px;background:rgba(255,255,255,.035)}
+.ww-backup-icon{width:40px;height:40px;display:grid;place-items:center;border-radius:12px;background:rgba(75,123,236,.12);font-size:21px}
+.ww-backup-copy{min-width:0;flex:1;display:flex;flex-direction:column;gap:4px}
+.ww-backup-copy strong{font-size:13px}
+.ww-backup-copy span{font-size:11px;color:#8fa0b7;line-height:1.45}
+.ww-backup-action{border:0;border-radius:11px;padding:10px 13px;background:rgba(75,123,236,.16);color:#edf4ff;font-weight:700;cursor:pointer}
+.ww-backup-action:hover{background:rgba(75,123,236,.25)}
+.ww-backup-status{min-height:20px;margin:9px 2px;color:#8fa0b7;font-size:11px}
+.ww-backup-note{font-size:10px;line-height:1.55;color:#718198;margin:15px 2px 3px}
+@media(max-width:560px){
+ .ww-backup-modal{align-items:stretch}
+ .ww-backup-panel{width:100%;max-height:none;border-radius:0}
+ .ww-backup-card{align-items:flex-start}
+}
+
+/* =========================================================
+   WHITE WOLF V46 — GLOBAL SEARCH + RESOURCE LIBRARY
+   ========================================================= */
+.ww-global-search{position:fixed;inset:0;z-index:100010;display:none;background:rgba(2,7,14,.78);backdrop-filter:blur(16px)}
+.ww-global-search.is-open{display:flex;align-items:flex-start;justify-content:center;padding:7vh 14px 24px}
+.ww-gs-backdrop{position:absolute;inset:0}
+.ww-gs-panel{position:relative;width:min(820px,100%);max-height:86vh;display:flex;flex-direction:column;overflow:hidden;background:#09121d;border:1px solid rgba(255,255,255,.10);border-radius:24px;box-shadow:0 30px 100px rgba(0,0,0,.6)}
+.ww-gs-header{display:flex;align-items:center;justify-content:space-between;padding:18px 20px 12px;border-bottom:1px solid rgba(255,255,255,.06)}
+.ww-gs-brand{display:flex;flex-direction:column;gap:3px}.ww-gs-brand strong{font-size:21px;color:#eef4ff}.ww-v46-kicker{font-size:9px;letter-spacing:.17em;color:#7f91aa;display:block}
+.ww-gs-close{width:40px;height:40px;border:0;border-radius:12px;background:rgba(255,255,255,.06);color:#eef4ff;font-size:25px;cursor:pointer}
+.ww-gs-input-wrap{display:flex;align-items:center;gap:10px;margin:14px 16px 10px;padding:0 13px;height:54px;border:1px solid rgba(100,160,255,.22);border-radius:15px;background:#07101a}.ww-gs-input-wrap>span{font-size:25px;color:#8fb3e6}.ww-gs-input-wrap input{min-width:0;flex:1;border:0;outline:0;background:transparent;color:#f1f6ff;font-size:15px}.ww-gs-input-wrap kbd{font-size:9px;color:#718198;border:1px solid rgba(255,255,255,.08);padding:4px 6px;border-radius:6px}
+.ww-gs-filters{display:flex;gap:7px;overflow:auto;padding:0 16px 12px}.ww-gs-filters button{white-space:nowrap;border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.035);color:#9eabc0;border-radius:999px;padding:7px 11px;font-size:10px;cursor:pointer}.ww-gs-filters button.active{background:rgba(75,123,236,.18);border-color:rgba(75,123,236,.35);color:#dce9ff}
+.ww-gs-summary{padding:0 19px 8px;color:#718198;font-size:10px}.ww-gs-results{overflow:auto;padding:0 10px 14px}.ww-gs-result{width:100%;display:flex;align-items:center;gap:11px;padding:12px 10px;border:0;border-bottom:1px solid rgba(255,255,255,.045);background:transparent;color:#eef4ff;text-align:left;cursor:pointer;border-radius:12px}.ww-gs-result:hover{background:rgba(255,255,255,.045)}.ww-gs-icon{width:36px;height:36px;display:grid;place-items:center;border-radius:10px;background:rgba(75,123,236,.10);font-size:16px;flex:0 0 auto}.ww-gs-copy{min-width:0;flex:1;display:flex;flex-direction:column;gap:3px}.ww-gs-copy strong{font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.ww-gs-copy small{font-size:10px;color:#77869d;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.ww-gs-type{font-size:8px;letter-spacing:.10em;color:#63738b}.ww-gs-fav{font-size:15px;color:#53647c;padding:5px}.ww-gs-fav.active{color:#e8cc6a}.ww-gs-arrow{font-size:20px;color:#52637b}.ww-gs-empty{padding:50px 20px;text-align:center;color:#8190a7}.ww-gs-empty span{font-size:35px;display:block;margin-bottom:10px}.ww-gs-empty strong{display:block;color:#dce5f3;margin-bottom:5px}.ww-gs-empty small{font-size:10px}
+body.ww-search-lock{overflow:hidden!important}.ww-global-search-trigger{font-size:23px!important;line-height:1;display:grid;place-items:center}
+
+.ww-library-wrap{margin:18px 0 110px;padding:18px;border:1px solid rgba(255,255,255,.07);border-radius:22px;background:linear-gradient(145deg,rgba(12,25,39,.88),rgba(6,14,23,.92));box-shadow:0 18px 55px rgba(0,0,0,.22)}
+.ww-library-head{display:flex;align-items:flex-end;justify-content:space-between;gap:15px;margin-bottom:16px}.ww-library-head h2{margin:3px 0 3px;font-size:22px}.ww-library-head p{margin:0;color:#718198;font-size:11px}.ww-lib-search{border:1px solid rgba(75,123,236,.25);background:rgba(75,123,236,.10);color:#dbe8ff;border-radius:11px;padding:10px 12px;font-size:10px;cursor:pointer;white-space:nowrap}
+.ww-library-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:18px}.ww-library-stats>div{padding:12px;border:1px solid rgba(255,255,255,.06);border-radius:13px;background:rgba(255,255,255,.025)}.ww-library-stats b{display:block;font-size:19px}.ww-library-stats span{font-size:9px;color:#6f8097;text-transform:uppercase;letter-spacing:.08em}
+.ww-lib-section{margin-top:18px}.ww-lib-section h3{margin:0 0 10px;font-size:12px;color:#cbd7e8}.ww-lib-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.ww-lib-card{position:relative;display:flex;align-items:center;gap:10px;min-width:0;padding:11px;border:1px solid rgba(255,255,255,.06);border-radius:14px;background:rgba(255,255,255,.025)}.ww-lib-icon{width:34px;height:34px;display:grid;place-items:center;border-radius:9px;background:rgba(75,123,236,.09);flex:0 0 auto}.ww-lib-card-body{min-width:0;flex:1;display:flex;flex-direction:column;gap:3px}.ww-lib-card-body strong{font-size:11px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.ww-lib-card-body span,.ww-lib-card-body small{font-size:9px;color:#718198;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.ww-lib-open{border:0;border-radius:9px;padding:7px 9px;background:rgba(255,255,255,.06);color:#dce8fa;font-size:9px;cursor:pointer}.ww-lib-star{position:absolute;right:6px;top:5px;border:0;background:transparent;color:#45566e;font-size:13px;cursor:pointer}.ww-lib-star.active{color:#e8cc6a}.ww-lib-card-body{padding-right:8px}
+@media(max-width:680px){.ww-global-search.is-open{padding:0}.ww-gs-panel{max-height:100vh;height:100%;border-radius:0}.ww-library-head{align-items:flex-start;flex-direction:column}.ww-lib-search{width:100%}.ww-library-stats{grid-template-columns:repeat(2,1fr)}.ww-lib-grid{grid-template-columns:1fr}.ww-library-wrap{border-radius:18px;padding:13px}}
